@@ -41,7 +41,7 @@ body {
 
 .main-content {
     min-height: 100vh;
-    width: 80%;
+    width: 92%;
     margin: 2rem auto;
     margin-block-start: 0cm;
     margin-block-end: 0cm;
@@ -51,12 +51,11 @@ body {
 
 .left-section {
     grid-column: span 2;
-    height: 100%;
     background-color: var(--left-bg);
 }
 
 .left-content {
-    padding: 2rem 3rem;
+    padding: 2.3rem 3rem;
 }
 
 .profile {
@@ -97,12 +96,14 @@ body {
 .main-title {
     font-size: 1.4rem;
     color: var(--head);
+    text-align: center;
     text-transform: uppercase;
     letter-spacing: 1px;
     padding-top: 3rem;
 }
 
 .contact-info ul {
+    color: var(--head);
     padding-top: 2rem;
 }
 
@@ -152,19 +153,19 @@ body {
 }
 
 .best-progress {
-    width: 94%;
+    width: 93%;
 }
 
 .bvg-progress {
-    width: 81%;
+    width: 80%;
 }
 
 .avg-progress {
-    width: 63%;
+    width: 65%;
 }
 
 .worst-progress {
-    width: 40%;
+    width: 37%;
 }
 
 .references-section li {
