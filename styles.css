@@ -74,7 +74,6 @@ body {
     width: 100%;
     border-radius: 50%;
     border: 4px solid var(--right-bg);
-    /*filter: invert(1) hue-rotate(180deg); */
 }
 
 .name {
@@ -183,14 +182,12 @@ body {
 
     cursor: pointer;
     position: relative;
-    top: -10px;
-    right: -616px;
+    top: 10px;
     color: var(--icon);
 }
 
 .right-section {
     grid-column: span 5;
-
     height: 100%;
 }
 
