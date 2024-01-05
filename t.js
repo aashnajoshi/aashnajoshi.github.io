@@ -1,20 +1,9 @@
-function myFunction() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-}
-
-var app = document.getElementsByTagName("BODY")[0];
-if (localStorage.lightMode == "dark") {
-    app.setAttribute("data-light-mode", "dark");
-}
-
-function toggle_light_mode() {
-    var app = document.getElementsByTagName("BODY")[0];
-    if (localStorage.lightMode == "dark") {
+function toggleLightMode() {
+    const app = document.body;
+    if (localStorage.lightMode === "dark") {
         localStorage.lightMode = "light";
         app.setAttribute("data-light-mode", "light");
-    }
-    else {
+    } else {
         localStorage.lightMode = "dark";
         app.setAttribute("data-light-mode", "dark");
     }
@@ -28,3 +17,7 @@ document.getElementById('dark-mode').addEventListener('click', function (e) {
     target.classList.toggle('fa-moon');
     target.classList.toggle('fa-sun');
 });
+
+if (localStorage.lightMode === "dark") {
+    document.body.setAttribute("data-light-mode", "dark");
+}

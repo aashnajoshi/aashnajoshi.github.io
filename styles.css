@@ -11,6 +11,54 @@
 :root {
     --left-bg: #00324A;
     --right-bg: #ffffff;
+    --head: #ffffff;
+    --head2: #1685b8;
+    --cont: #718096;
+    --icon: #000000;
+    --blue-dark: #0a132b;
+    --blue-mid: #27376b;
+    --blue-light: #5bc3e6;
+}
+
+body {
+    padding: 10px;
+    background-color: var(--right-bg);
+}
+
+/* Combine selectors with similar styles */
+.name,
+.career,
+.main-title,
+.contact-info ul,
+.skills-section ul,
+.references-section li,
+.tl-title,
+.tl-content,
+.tl-title-2,
+.right-title,
+.sub-title,
+.sub-para {
+    color: var(--head);
+}
+
+.contact-info ul li,
+.references-section li i {
+    color: var(--cont);
+}
+
+/* Combine color styles into CSS variables */
+.tl-title {
+    color: var(--blue-mid);
+}
+
+.tl-title-2 {
+    color: var(--blue-light);
+}
+
+
+:root {
+    --left-bg: #00324A;
+    --right-bg: #ffffff;
 
     --head: #ffffff;
     --head2: #1685b8;
