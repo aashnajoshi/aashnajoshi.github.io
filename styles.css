@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 * {
     padding: 0;
     margin: 0;
@@ -235,7 +236,7 @@ body {
 .right-title::after {
     content: "";
     position: absolute;
-    width: 65%;
+    width: 40%;
     height: 1px;
     background-color: var(--cont);
     border-radius: 12px;
