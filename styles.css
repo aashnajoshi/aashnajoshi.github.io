@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 * {
     padding: 0;
     margin: 0;
@@ -234,9 +235,9 @@ body {
 .right-title::after {
     content: "";
     position: absolute;
-    width: 60%;
-    height: .2rem;
-    background-color: var(--right-bg);
+    width: 65%;
+    height: 1px;
+    background-color: var(--cont);
     border-radius: 12px;
     right: 0;
     top: 50%;
@@ -321,12 +322,12 @@ body {
 }
 
 @media screen and (max-width: 681px) {
-    .right-title::after {
+    /* .right-title::after {
         width: 30%;
-    }
+    } */
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
 
 i.toggler {
     font-size: 20px;
@@ -347,7 +348,6 @@ i.toggler {
 }
 
 .dark-mode h1,
-.dark-mode h3,
 .dark-mode h4 {
     color: black;
 }
