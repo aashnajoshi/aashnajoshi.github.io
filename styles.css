@@ -25,7 +25,6 @@ body {
     background-color: var(--right-bg);
 }
 
-/* Combine selectors with similar styles */
 .name,
 .career,
 .main-title,
@@ -46,7 +45,6 @@ body {
     color: var(--cont);
 }
 
-/* Combine color styles into CSS variables */
 .tl-title {
     color: var(--blue-mid);
 }
@@ -105,7 +103,7 @@ body {
 }
 
 .left-content {
-    padding: 2.3rem 3rem;
+    padding: 2.3rem 2rem;
 }
 
 .profile {
@@ -341,8 +339,6 @@ body {
 }
 
 @media screen and (max-width: 992px) {
-
-    /* Tablet-sized screen */
     .main-content {
         grid-template-columns: repeat(1, 1fr);
     }
