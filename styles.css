@@ -15,63 +15,19 @@
     --head2: #1685b8;
     --cont: #718096;
     --icon: #000000;
-    --blue-dark: #0a132b;
-    --blue-mid: #27376b;
+    --blue-dark: #1a2b5a;
+    --blue-mid: #39509b;
     --blue-light: #5bc3e6;
 }
 
 body {
     padding: 10px;
     background-color: var(--right-bg);
-}
-
-.name,
-.career,
-.main-title,
-.contact-info ul,
-.skills-section ul,
-.references-section li,
-.tl-title,
-.tl-content,
-.tl-title-2,
-.right-title,
-.sub-title,
-.sub-para {
-    color: var(--head);
 }
 
 .contact-info ul li,
 .references-section li i {
     color: var(--cont);
-}
-
-.tl-title {
-    color: var(--blue-mid);
-}
-
-.tl-title-2 {
-    color: var(--blue-light);
-}
-
-
-:root {
-    --left-bg: #00324A;
-    --right-bg: #ffffff;
-
-    --head: #ffffff;
-    --head2: #1685b8;
-    --cont: #718096;
-
-    --icon: #000000;
-
-    --blue-dark: #0a132b;
-    --blue-mid: #27376b;
-    --blue-light: #5bc3e6;
-}
-
-body {
-    padding: 10px;
-    background-color: var(--right-bg);
 }
 
 .links {
@@ -185,7 +141,7 @@ body {
 }
 
 .progress-bar {
-    background-color: var(--blue-dark);
+    background-color: var(--cont);
     width: 100%;
     height: .4rem;
     position: relative;
@@ -232,6 +188,19 @@ body {
     cursor: pointer;
     position: relative;
     top: 10px;
+}
+
+#btn {
+    text-align: center;
+    position: fixed;
+    bottom: 30px;
+    right: 15px;
+    cursor: pointer;
+    transition: all 0.1s linear 0.1s;
+}
+
+#btn:hover {
+    transform: scale(1.2);
 }
 
 .right-section {
