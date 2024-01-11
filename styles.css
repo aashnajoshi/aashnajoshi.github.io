@@ -48,7 +48,7 @@ body {
     background-color: var(--left-bg);
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
-    box-shadow: var(--shadow);
+    box-shadow: 1rem 0 1.8rem -0.8rem var(--icon);
 }
 
 .profile img {
