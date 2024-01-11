@@ -8,24 +8,16 @@
 }
 
 :root {
-    --left-bg: #00324A;
-    --main-bg: white;
-    --cont: #7e7eae;
     --w: whitesmoke;
     --b: black;
-
-    --icon: var(--b);
-
+    --cont: #7e7eae;
+    --left-bg: #00324A;
+    --main-bg: white;
     --blue-dark: #00356B;
     --blue-mid: #009DC4;
     --blue-light: #A4DDED;
-
-    --shadow-left: #191b1c7a 6px 2px 16px 0px,
-        #0b0808cc -6px -2px 16px 0px;
-    --shadow-main: #32325d40 0px 50px 100px -20px,
-        #0000004d 0px 30px 60px -30px,
-        #0a254059 0px -2px 6px 0px inset;
-
+    --icon: var(--b);
+    --shadow: 1rem 1rem 3.2rem var(--b);
 }
 
 body {
@@ -47,7 +39,7 @@ body {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     border-radius: 1rem;
-    box-shadow: var(--shadow-main)
+    box-shadow: var(--shadow);
 }
 
 .left-section {
@@ -56,7 +48,7 @@ body {
     background-color: var(--left-bg);
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
-    box-shadow: var(--shadow-left);
+    box-shadow: var(--shadow);
 }
 
 .profile img {
@@ -275,7 +267,7 @@ footer {
 }
 
 footer a {
-    color: var(--blue-mid);
+    color: var(--blue-dark);
     text-decoration: none;
 }
 
@@ -330,17 +322,11 @@ footer a {
     }
 }
 
-
 /* Dark Theme */
 .dark-mode {
     --main-bg: var(--b);
     --icon: var(--w);
-
-    --shadow-left: #e3f6ff64 6px 2px 16px 0px,
-        #b3acacac -6px -2px 16px 0px;
-    --shadow-main: #ffffff6f 0px 50px 100px -20px,
-        #dfdede82 0px 30px 60px -30px,
-        #ffffff8e 0px -2px 6px 0px inset;
+    --shadow: .7rem 1rem 2rem var(--w);
 }
 
 .dark-mode i.toggler {
