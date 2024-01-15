@@ -103,8 +103,8 @@ span {
     }
 
     i {
-        font-size: 1.3rem;
         color: var(--blue-mid);
+        object-fit: contain;
         padding-right: 1rem;
     }
 
