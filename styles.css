@@ -31,7 +31,13 @@ h3 {
     font-size: 1.4rem;
     text-align: center;
     text-transform: uppercase;
-    padding: .4rem .5rem .5rem;
+    padding: .6rem;
+}
+
+h5,
+span {
+    font-size: 1.3rem;
+    text-transform: uppercase;
 }
 
 .links {
@@ -53,7 +59,7 @@ h3 {
 
 .left-section {
     grid-column: span 2;
-    padding: 2rem;
+    padding: 1.2rem 1.5rem 1.2rem 1.5rem;
     background-color: var(--left-bg);
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
@@ -88,7 +94,6 @@ h3 {
     }
 
     ul li {
-        padding: .4rem 0;
         display: flex;
         align-items: center;
     }
@@ -98,7 +103,7 @@ h3 {
     }
 
     i {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         color: var(--blue-mid);
         padding-right: 1rem;
     }
@@ -116,10 +121,6 @@ h3 {
 }
 
 @scope(.skills-section) {
-
-    ul {
-        padding-top: 2rem;
-    }
 
     p {
         font-size: 1rem;
@@ -202,16 +203,17 @@ i.toggler {
 #contact {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     font-size: 1.6rem;
     padding: 1rem;
 }
 
 @scope(.info) {
-    h2 {
-        font-size: 1.6rem;
+
+    h1,
+    h2,
+    h3 {
         color: var(--blue-dark);
-        text-transform: uppercase;
         position: relative;
     }
 
@@ -222,18 +224,29 @@ i.toggler {
     }
 
     h5 {
-        font-size: 1.3rem;
         color: var(--blue-mid);
-        text-transform: uppercase;
     }
 
-    .sect {
-        padding-bottom: 2rem;
+    span {
+        color: var(--blue-light);
     }
+
+    span::before {
+        background-color: var(--blue-light);
+        content: "";
+        position: absolute;
+        width: .6rem;
+        height: .6rem;
+        border-radius: 50%;
+        transform: translateX(-50%);
+        left: 0;
+    }
+
 
     .timeline {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        gap: 0 1rem;
     }
 
     .right-title::after {
@@ -254,24 +267,6 @@ i.toggler {
         padding: 0 2rem 1.5rem 2rem;
         position: relative;
     }
-
-    span {
-        font-size: 1.3rem;
-        color: var(--blue-light);
-        text-transform: uppercase;
-    }
-
-    span::before {
-        background-color: var(--blue-light);
-        content: "";
-        position: absolute;
-        width: .7rem;
-        height: .7rem;
-        border-radius: 50%;
-        transform: translateX(-50%);
-        left: 0;
-    }
-
 }
 
 footer {
