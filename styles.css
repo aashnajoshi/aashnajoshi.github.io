@@ -8,14 +8,18 @@
 }
 
 :root {
-    --w: whitesmoke;
-    --b: black;
+    --w: #F5F5F5;
+    --b: #07080D;
+
     --cont: #7e7eae;
+    --info: #AFB6DD;
+
     --left-bg: #00324A;
-    --main-bg: white;
     --blue-dark: #44679C;
     --blue-mid: #009DC4;
     --blue-light: #A4DDED;
+
+    --main-bg: var(--w);
     --icon: var(--b);
     --shadow: 1rem 1rem 3.2rem var(--b);
 }
@@ -40,8 +44,8 @@ span {
     text-transform: uppercase;
 }
 
-.links {
-    color: var(--cont);
+a {
+    color: var(--info);
     text-decoration: none;
 }
 
@@ -83,13 +87,13 @@ span {
 
     p {
         font-size: 1.3rem;
-        color: var(--cont);
+        color: var(--info);
         text-align: center;
         text-transform: uppercase;
     }
 
     ul {
-        color: var(--cont);
+        color: var(--info);
         padding-top: 2rem;
     }
 
@@ -124,7 +128,6 @@ span {
 
     p {
         font-size: 1rem;
-        color: var(--cont);
         text-transform: uppercase;
     }
 
