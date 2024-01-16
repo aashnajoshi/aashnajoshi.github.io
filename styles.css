@@ -13,7 +13,7 @@
     --cont: #7e7eae;
     --left-bg: #00324A;
     --main-bg: white;
-    --blue-dark: #00356B;
+    --blue-dark: #44679C;
     --blue-mid: #009DC4;
     --blue-light: #A4DDED;
     --icon: var(--b);
@@ -213,7 +213,7 @@ i.toggler {
     h1,
     h2,
     h3 {
-        color: var(--blue-dark);
+        color: var(--icon);
         position: relative;
     }
 
@@ -224,15 +224,16 @@ i.toggler {
     }
 
     h5 {
-        color: var(--blue-mid);
+        color: var(--blue-dark);
     }
 
     span {
-        color: var(--blue-light);
+        color: var(--blue-mid);
+        fontweight: strong;
     }
 
     span::before {
-        background-color: var(--blue-light);
+        background-color: var(--blue-mid);
         content: "";
         position: absolute;
         width: .6rem;
