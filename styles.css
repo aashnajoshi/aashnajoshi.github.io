@@ -196,7 +196,6 @@ i.toggler {
 
 .right-section {
     grid-column: span 5;
-    height: 100%;
     padding: 2rem 3rem;
 }
 
@@ -233,7 +232,7 @@ i.toggler {
     }
 
     span::before {
-        background-color: var(--blue-mid);
+        background-color: var(--blue-light);
         content: "";
         position: absolute;
         width: .6rem;
@@ -250,22 +249,9 @@ i.toggler {
         gap: 0 1rem;
     }
 
-    .right-title::after {
-        content: "";
-        position: absolute;
-        width: 40%;
-        height: 0.12rem;
-        background-color: var(--cont);
-        border-radius: 1rem;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-
     .tl-content {
-        border-left: 0.1rem solid var(--cont);
-        padding: 0 2rem 1.5rem 2rem;
+        border-left: 0.07rem solid var(--cont);
+        padding: 0rem 2rem 1.5rem 2rem;
         position: relative;
     }
 }
@@ -275,7 +261,7 @@ footer {
 }
 
 footer a {
-    color: var(--blue-dark);
+    color: var(--left-bg);
     text-decoration: none;
 }
 
