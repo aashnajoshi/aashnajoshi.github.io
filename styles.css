@@ -70,7 +70,7 @@ a {
     box-shadow: 1rem 0 1.8rem -0.8rem var(--icon);
 }
 
-@scope(.profile) to (body) {
+@scope(.profile) to (.info) {
 
     img {
         border-bottom: .4rem solid;
@@ -94,7 +94,7 @@ a {
 
     ul {
         color: var(--info);
-        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 
     ul li {
@@ -206,8 +206,7 @@ i.toggler {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    font-size: 1.6rem;
-    padding: 1rem;
+    font-size: 1.7rem;
 }
 
 @scope(.info) to (body) {
