@@ -21,7 +21,7 @@
 
     --main-bg: var(--w);
     --icon: var(--b);
-    --shadow: 1rem 1rem 3.2rem var(--b);
+    --shadow: 1em 1em 3.2em var(--b);
 }
 
 body {
@@ -35,7 +35,7 @@ h3 {
     font-size: 1.4rem;
     text-align: center;
     text-transform: uppercase;
-    padding: .6rem;
+    padding: .6em;
 }
 
 h5,
@@ -52,31 +52,29 @@ a {
 .main-content {
     min-height: 100vh;
     width: 92%;
-    margin: 2rem auto;
-    margin-block-start: 0cm;
-    margin-block-end: 0cm;
+    margin: 2em auto;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    border-radius: 1rem;
+    border-radius: 1em;
     box-shadow: var(--shadow);
 }
 
 .left-section {
     grid-column: span 2;
-    padding: 1.2rem 1.5rem 1.2rem 1.5rem;
+    padding: 1.2em 1.5em 1.2em 1.5em;
     background-color: var(--left-bg);
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    box-shadow: 1rem 0 1.8rem -0.8rem var(--icon);
+    border-top-left-radius: 1em;
+    border-bottom-left-radius: 1em;
+    box-shadow: 1em 0 1.8em -0.8em var(--icon);
 }
 
 @scope(.profile) to (.info) {
 
     img {
-        border-bottom: .4rem solid;
+        border-bottom: .4em solid;
         width: 100%;
         border-radius: 50%;
-        border: .3rem solid var(--w);
+        border: .3em solid var(--w);
     }
 
     h1,
@@ -94,7 +92,7 @@ a {
 
     ul {
         color: var(--info);
-        padding-bottom: 2rem;
+        padding-bottom: 2em;
     }
 
     ul li {
@@ -109,7 +107,7 @@ a {
     i {
         color: var(--blue-mid);
         object-fit: contain;
-        padding-right: 1rem;
+        padding-right: 1em;
     }
 
     /* .references-section li {
@@ -134,15 +132,15 @@ a {
     ul li {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        padding: .4rem 0;
+        padding: .4em 0;
     }
 
     .progress-bar {
         background-color: var(--w);
         width: 100%;
-        height: .4rem;
+        height: .4em;
         position: relative;
-        border-radius: 6rem;
+        border-radius: 6em;
     }
 
     .progress {
@@ -150,7 +148,7 @@ a {
         height: 100%;
         position: absolute;
         left: 0;
-        border-radius: 2rem;
+        border-radius: 2em;
     }
 
     .best-progress {
@@ -175,7 +173,7 @@ a {
     color: var(--icon);
     position: fixed;
     cursor: pointer;
-    top: 2rem;
+    top: 4rem;
     right: 5rem;
 }
 
@@ -187,8 +185,8 @@ i.toggler {
 
 #btn {
     position: fixed;
-    bottom: 2rem;
-    right: 1rem;
+    bottom: 2em;
+    right: 1em;
     cursor: pointer;
     transition: all 0.1s linear 0.1s;
 }
@@ -199,14 +197,14 @@ i.toggler {
 
 .right-section {
     grid-column: span 5;
-    padding: 2rem 3rem;
+    padding: 2em 3em;
 }
 
 #contact {
+    font-size: 1.7rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    font-size: 1.7rem;
 }
 
 @scope(.info) to (body) {
@@ -221,7 +219,7 @@ i.toggler {
     p {
         color: var(--cont);
         font-size: .92rem;
-        line-height: 1.2rem;
+        line-height: 1.2em;
     }
 
     h5 {
@@ -237,8 +235,8 @@ i.toggler {
         background-color: var(--blue-light);
         content: "";
         position: absolute;
-        width: .6rem;
-        height: .6rem;
+        width: .5em;
+        height: .5em;
         border-radius: 50%;
         transform: translateX(-50%);
         left: 0;
@@ -248,12 +246,12 @@ i.toggler {
     .timeline {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 0 1rem;
+        gap: 0 1em;
     }
 
     .tl-content {
-        border-left: 0.07rem solid var(--cont);
-        padding: 0rem 2rem 1.5rem 2rem;
+        border-left: 0.07em solid var(--cont);
+        padding: 0 2em 1.5em 2em;
         position: relative;
     }
 }
@@ -263,7 +261,7 @@ footer {
 }
 
 footer a {
-    color: var(--left-bg);
+    color: var(--blue-mid);
     text-decoration: none;
 }
 
@@ -294,7 +292,7 @@ footer a {
 .dark-mode {
     --main-bg: var(--b);
     --icon: var(--w);
-    --shadow: .7rem 1rem 2rem var(--w);
+    --shadow: 1em 1em 3.2em var(--w);
 }
 
 .dark-mode i.toggler {
