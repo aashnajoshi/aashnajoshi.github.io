@@ -185,8 +185,8 @@ i.toggler {
 
 #btn {
     position: fixed;
-    bottom: 3em;
-    right: .3em;
+    bottom: 4em;
+    right: 5em;
     cursor: pointer;
     transition: all 0.1s linear 0.1s;
 }
