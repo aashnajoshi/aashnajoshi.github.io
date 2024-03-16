@@ -133,7 +133,7 @@ footer a {
     i {
         color: var(--blue-mid);
         object-fit: contain;
-        padding-right: 1em;
+        padding-right: 1.2em;
     }
 }
 
