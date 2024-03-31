@@ -10,7 +10,6 @@
 :root {
     --w: #F5F5F5;
     --b: #07080D;
-
     --cont: #7e7eae;
     --info: #AFB6DD;
 
@@ -95,7 +94,6 @@ footer a {
     text-decoration: none;
 }
 
-/* division based on scopes */
 @scope(.profile) to (.info) {
 
     img {
@@ -199,11 +197,10 @@ footer a {
 
     #btn {
         position: fixed;
-        height: 2em;
-        bottom: 5em;
+        height: 1.5em;
+        bottom: 5.5rem;
         right: 5rem;
         cursor: pointer;
-        transition: all 0.1s linear 0.1s;
     }
 
     #btn:hover {
