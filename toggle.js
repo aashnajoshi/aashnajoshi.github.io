@@ -1,29 +1,23 @@
-const toggler = document.body;
-const darkModeButton = document.getElementById('dark-mode');
-
 function toggleLightMode() {
-    if (localStorage.lightMode === "dark") {
-        localStorage.lightMode = "light";
-        toggler.setAttribute("data-light-mode", "light");
-    } else {
-        localStorage.lightMode = "dark";
-        toggler.setAttribute("data-light-mode", "dark");
-    }
-    console.log("lightMode = " + localStorage.lightMode);
+    const app = document.body;
+    const lightMode = localStorage.lightMode === "dark" ? "light" : "dark";
+    localStorage.lightMode = lightMode;
+    app.setAttribute("data-light-mode", lightMode);
+    console.log("lightMode = " + lightMode);
 }
 
-darkModeButton.addEventListener('click', function (e) {
+document.getElementById('dark-mode').addEventListener('click', function (e) {
+    const toggler = document.body;
     toggler.classList.toggle('dark-mode');
-    darkModeButton.querySelector('i').classList.toggle('fa-moon');
-    darkModeButton.querySelector('i').classList.toggle('fa-sun');
+    const target = e.target;
+    target.classList.toggle('fa-moon');
+    target.classList.toggle('fa-sun');
 });
-
 if (localStorage.lightMode === "dark") {
-    toggler.setAttribute("data-light-mode", "dark");
+    document.body.setAttribute("data-light-mode", "dark");
 }
 
 const elementsToDisableRightClick = document.querySelectorAll('.prevent-right-click');
-
 elementsToDisableRightClick.forEach(element => {
     element.addEventListener('contextmenu', function (e) {
         e.preventDefault();
