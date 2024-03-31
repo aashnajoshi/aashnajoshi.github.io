@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
 * {
     padding: 0;
@@ -76,25 +75,10 @@ span {
 }
 
 #contact {
-    font-size: 2rem;
+    font-size: 1.7rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
-}
-
-.socialdiv {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    align-items: center;
-}
-
-.socialheading {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-
 }
 
 .right-section {
@@ -215,10 +199,10 @@ footer a {
 
     #btn {
         position: fixed;
-        height: 2.3rem;
-        bottom: 5.5rem;
-        right: 6em;
+        bottom: 4.5em;
+        right: 5em;
         cursor: pointer;
+        transition: all 0.1s linear 0.1s;
     }
 
     #btn:hover {
@@ -278,7 +262,6 @@ footer a {
 @media (max-width: 1000px) {
     .main-content {
         grid-template-columns: repeat(1, 1fr);
-        font-size: 10px;
     }
 
     .left-section {
@@ -290,34 +273,8 @@ footer a {
     }
 }
 
-.details2 {
-    font-size: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: left;
-    width: 100%;
-
-}
-
-.details1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-
-}
-
-.personalinfo {
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    width: max-content;
-
-}
-
 @media (min-width: 0px) and (max-width: 999px) {
     .left-section {
-        font-family: "Garamond", sans-serif;
         border-top-right-radius: 1rem;
         border-bottom-left-radius: 0;
     }
