@@ -199,8 +199,9 @@ footer a {
 
     #btn {
         position: fixed;
-        bottom: 4.5em;
-        right: 5em;
+        height: 2em;
+        bottom: 5em;
+        right: 5rem;
         cursor: pointer;
         transition: all 0.1s linear 0.1s;
     }
