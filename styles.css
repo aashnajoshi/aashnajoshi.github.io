@@ -96,7 +96,7 @@ footer a {
 
 @scope(.profile) to (.info) {
 
-    img {
+    #pfp {
         border-bottom: .4em solid;
         width: 100%;
         border-radius: 50%;
@@ -275,6 +275,13 @@ footer a {
     .left-section {
         border-top-right-radius: 1rem;
         border-bottom-left-radius: 0;
+    }
+
+    #pfp {
+        border-bottom: .4em solid;
+        width: 40%;
+        border-radius: 50%;
+        border: .3em solid var(--w);
     }
 }
 
