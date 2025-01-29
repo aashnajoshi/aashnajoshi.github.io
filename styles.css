@@ -98,7 +98,7 @@ footer a {
 
     #pfp {
         border-bottom: .4em solid;
-        width: 100%;
+        width: 80%;
         border-radius: 50%;
         border: .3em solid var(--w);
     }
@@ -279,9 +279,13 @@ footer a {
 
     #pfp {
         border-bottom: .4em solid;
-        width: 40%;
+        width: 10%;
         border-radius: 50%;
         border: .3em solid var(--w);
+    }
+
+    p {
+        font-size: 1.3rem;
     }
 }
 
