@@ -10,15 +10,12 @@
 :root {
     --w: #F5F5F5;
     --b: #07080D;
-
     --cont: #7e7eae;
     --info: #AFB6DD;
-
     --left-bg: #00324A;
     --blue-dark: #44679C;
     --blue-mid: #009DC4;
     --blue-light: #A4DDED;
-
     --main-bg: var(--w);
     --icon: var(--b);
     --shadow: 1em 1em 3.2em var(--b);
@@ -39,10 +36,10 @@ h2,
 h3 {
     text-transform: uppercase;
     font-size: 1.4rem;
-    padding: .6em;
+    padding: 0.6em;
 }
 
-h4>a {
+h4 > a {
     text-transform: uppercase;
 }
 
@@ -67,10 +64,9 @@ span {
 
 .left-section {
     grid-column: span 2;
-    padding: 1.2em 1.5em 1.2em 1.5em;
+    padding: 1.2em 1.5em;
     background-color: var(--left-bg);
-    border-top-left-radius: 1em;
-    border-bottom-left-radius: 1em;
+    border-radius: 1em 0 0 1em;
     box-shadow: 1em 0 1.8em -0.8em var(--icon);
 }
 
@@ -87,22 +83,20 @@ span {
 }
 
 footer {
-    color: var(--icon)
+    color: var(--icon);
 }
 
 footer a {
     color: var(--blue-mid);
-    text-decoration: none;
 }
 
-/* division based on scopes */
 @scope(.profile) to (.info) {
-
-    img {
-        border-bottom: .4em solid;
-        width: 100%;
+    #pfp {
+        border: 0.3em solid var(--w);
+        border-bottom: 0.4em solid var(--w);
+        /* Changed to white to match border */
+        width: 80%;
         border-radius: 50%;
-        border: .3em solid var(--w);
     }
 
     h1,
@@ -132,27 +126,55 @@ footer a {
 
     i {
         color: var(--blue-mid);
-        object-fit: contain;
         padding-right: 1.2em;
     }
 }
 
-@scope(.skills) to (.info) {
+@scope(.personal-info) to (.info) {
+    ul li {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0.4em 0;
+        align-items: center;
+        gap: 0.5em;
+    }
 
+    p:first-child {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 0;
+    }
+
+    p:last-child {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 0;
+        font-size: 1rem;
+        color: var(--cont);
+    }
+
+    i {
+        color: var(--blue-mid);
+        font-size: 1.2rem;
+    }
+}
+
+@scope(.skills) to (.info) {
     p {
         font-size: 1rem;
+        color: var(--cont);
     }
 
     ul li {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        padding: .4em 0;
+        padding: 0.4em 0;
     }
 
     .progress-bar {
         background-color: var(--w);
         width: 100%;
-        height: .4em;
+        height: 0.4em;
         position: relative;
         border-radius: 6em;
     }
@@ -199,10 +221,10 @@ footer a {
 
     #btn {
         position: fixed;
-        bottom: 4.5em;
-        right: 5em;
+        height: 1.5em;
+        bottom: 5.5rem;
+        right: 5rem;
         cursor: pointer;
-        transition: all 0.1s linear 0.1s;
     }
 
     #btn:hover {
@@ -221,7 +243,7 @@ footer a {
 
     p {
         color: var(--cont);
-        font-size: .92rem;
+        font-size: 0.92rem;
         line-height: 1.2em;
     }
 
@@ -231,15 +253,15 @@ footer a {
 
     span {
         color: var(--blue-mid);
-        fontweight: strong;
+        font-weight: bold;
     }
 
     span::before {
         background-color: var(--blue-light);
         content: "";
         position: absolute;
-        width: .5em;
-        height: .5em;
+        width: 0.5em;
+        height: 0.5em;
         border-radius: 50%;
         transform: translateX(-50%);
         left: 0;
@@ -253,43 +275,37 @@ footer a {
 
     .tl-content {
         border-left: 0.07em solid var(--cont);
-        padding: 0 2em 1.5em 2em;
+        padding: 0 2em 1.5em;
         position: relative;
     }
 }
 
-/*Media Querries*/
 @media (max-width: 1000px) {
     .main-content {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: 1fr;
     }
 
-    .left-section {
-        grid-column: span 4;
-    }
-
+    .left-section,
     .right-section {
-        grid-column: span 8;
+        grid-column: span 7;
     }
 }
 
-@media (min-width: 0px) and (max-width: 999px) {
+@media (max-width: 999px) {
     .left-section {
-        border-top-right-radius: 1rem;
-        border-bottom-left-radius: 0;
+        border-radius: 1em 1em 0 0;
+    }
+
+    #pfp {
+        width: 10%;
+    }
+
+    p {
+        font-size: 1.3rem;
     }
 }
 
-/* Dark Theme */
 .dark-mode {
-    --main-bg: var(--b);
-    --icon: var(--w);
-    --shadow: 1em 1em 3.2em var(--w);
-}
-
-.dark-mode i.toggler {
-    color: var(--icon);
-}dark-mode {
     --main-bg: var(--b);
     --icon: var(--w);
     --shadow: 1em 1em 3.2em var(--w);

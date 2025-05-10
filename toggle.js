@@ -1,23 +1,30 @@
-function toggleLightMode() {
-    const app = document.body;
-    if (localStorage.lightMode === "dark") {
-        localStorage.lightMode = "light";
-        app.setAttribute("data-light-mode", "light");
-    } else {
-        localStorage.lightMode = "dark";
-        app.setAttribute("data-light-mode", "dark");
+document.addEventListener('DOMContentLoaded', () => {
+    const body = document.body;
+    const toggleButton = document.getElementById('dark-mode');
+    const savedMode = localStorage.getItem('lightMode');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initialMode = savedMode || (systemPrefersDark ? 'dark' : 'light');
+
+    const applyTheme = (mode) => {
+        body.setAttribute('data-light-mode', mode);
+        body.classList.toggle('dark-mode', mode === 'dark');
+        if (toggleButton) {
+            toggleButton.classList.toggle('fa-moon', mode === 'light');
+            toggleButton.classList.toggle('fa-sun', mode === 'dark');
+            localStorage.setItem('lightMode', mode);
+        }
+    };
+    applyTheme(initialMode);
+
+    if (toggleButton) {
+        toggleButton.addEventListener('click', () => {
+            const currentMode = body.getAttribute('data-light-mode');
+            const newMode = currentMode === 'light' ? 'dark' : 'light';
+            applyTheme(newMode);
+        });
     }
-    console.log("lightMode = " + localStorage.lightMode);
-}
 
-document.getElementById('dark-mode').addEventListener('click', function (e) {
-    const toggler = document.body;
-    toggler.classList.toggle('dark-mode');
-    const target = e.target;
-    target.classList.toggle('fa-moon');
-    target.classList.toggle('fa-sun');
+    document.querySelectorAll('.prevent-right-click').forEach(element => {
+        element.addEventListener('contextmenu', e => e.preventDefault());
+    });
 });
-
-if (localStorage.lightMode === "dark") {
-    document.body.setAttribute("data-light-mode", "dark");
-}
