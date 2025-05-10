@@ -1,25 +1,30 @@
-function toggleLightMode() {
-    const app = document.body;
-    const lightMode = localStorage.lightMode === "dark" ? "light" : "dark";
-    localStorage.lightMode = lightMode;
-    app.setAttribute("data-light-mode", lightMode);
-    console.log("lightMode = " + lightMode);
-}
+document.addEventListener('DOMContentLoaded', () => {
+    const body = document.body;
+    const toggleButton = document.getElementById('dark-mode');
+    const savedMode = localStorage.getItem('lightMode');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const initialMode = savedMode || (systemPrefersDark ? 'dark' : 'light');
 
-document.getElementById('dark-mode').addEventListener('click', function (e) {
-    const toggler = document.body;
-    toggler.classList.toggle('dark-mode');
-    const target = e.target;
-    target.classList.toggle('fa-moon');
-    target.classList.toggle('fa-sun');
-});
-if (localStorage.lightMode === "dark") {
-    document.body.setAttribute("data-light-mode", "dark");
-}
+    const applyTheme = (mode) => {
+        body.setAttribute('data-light-mode', mode);
+        body.classList.toggle('dark-mode', mode === 'dark');
+        if (toggleButton) {
+            toggleButton.classList.toggle('fa-moon', mode === 'light');
+            toggleButton.classList.toggle('fa-sun', mode === 'dark');
+            localStorage.setItem('lightMode', mode);
+        }
+    };
+    applyTheme(initialMode);
 
-const elementsToDisableRightClick = document.querySelectorAll('.prevent-right-click');
-elementsToDisableRightClick.forEach(element => {
-    element.addEventListener('contextmenu', function (e) {
-        e.preventDefault();
+    if (toggleButton) {
+        toggleButton.addEventListener('click', () => {
+            const currentMode = body.getAttribute('data-light-mode');
+            const newMode = currentMode === 'light' ? 'dark' : 'light';
+            applyTheme(newMode);
+        });
+    }
+
+    document.querySelectorAll('.prevent-right-click').forEach(element => {
+        element.addEventListener('contextmenu', e => e.preventDefault());
     });
 });
