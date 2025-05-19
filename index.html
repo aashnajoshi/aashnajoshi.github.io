@@ -1,167 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Digital Resume | Name</title>
-    <meta charset="UTF-8" http-equiv="X-UA-Compatible" content="IE=edge" name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="My online persona, which combines a résumé and portfolio to provide a concise overview about me!">
-    <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/128/4310/4310155.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="My online persona, which combines a résumé and portfolio to provide a concise overview about me!">
+    <meta name="keywords" content="Resume, Portfolio">
+    <link rel="shortcut icon" href="https://cdn0.iconfinder.com/data/icons/human-resources-29/66/5-128.png">
+    <title>Name | Digital Resume</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://kit.fontawesome.com/91e547386c.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <main class="main-content" id="top">
-        <section class="left-section center">
-            <div class="profile">
-                <img src="https://cdn.pixabay.com/photo/2016/04/22/04/57/graduation-1345143_1280.png">
-                <h2>Name</h2>
-                <p>Position</p><br>
-                <h3>Personal Info</h3>
-                <ul>
-                    <li><i class="fa fa-venus"></i>Gender</li>
-                    <li><i class="fa fa-calendar"></i>DOB</li>
-                    <li><i class="fa fa-language"></i>Languages</li>
-                    <li><i class="fa fa-map-marker"></i>Location</li>
-                </ul>
-                <h3>Skills</h3>
-<!--Prgress Divisions: best-progress=93%; a_avg-progress=80%; avg-progress=65%; b_avg-progress=37%; Can be changed from lines (168-182) in 'styles.css' file-->
-                <div class="skills">
-                    <ul>
-                        <li>
-                            <p>Skill_1</p>
-                            <div class="progress-bar"><div class="progress best-progress"></div></div>
-                        </li>
-                        <li>
-                            <p>Skill_2</p>
-                            <div class="progress-bar"><div class="progress best-progress"></div></div>
-                        </li>
-                        <li>
-                            <p>Skill_3</p>
-                            <div class="progress-bar"><div class="progress avg-progress"></div></div>
-                        </li>
-                        <li>
-                            <p>Skill_4</p>
-                            <div class="progress-bar"><div class="progress best-progress"></div></div>
-                        </li>
-                        <li>
-                            <p>Skill_5</p>
-                            <div class="progress-bar"><div class="progress avg-progress"></div></div>
-                        </li>
-                    </ul>
-                </div>
-                <h3>Socials</h3>
-                <ul id="contact">
-                    <li><a class="links" href="tel:"><i class="fa fa-phone"></i></a></li>
-                    <li><a class="links" href="mailto:name@gmail.com" target="_blank"><i class="fa fa-envelope-o"></i></a></li>
-                    <li><a class="links" href="https://github.com/aashnajoshi" target="_blank"><i class="fa fa-github"></i></a></li>
-                    <li><a class="links" href="https://www.linkedin.com/in/aashnajoshi" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+<body class="text-gray-800 transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="sticky top-0 bg-white shadow-md z-10">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+            <ul class="flex space-x-4">
+                <li><a href="#about" class="hover:text-blue-600">About</a></li>
+                <li><a href="#education" class="hover:text-blue-600">Education</a></li>
+                <li><a href="#experience" class="hover:text-blue-600">Experience</a></li>
+                <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
+                <li><a href="#certificates" class="hover:text-blue-600">Certificates</a></li>
+            </ul>
+            <button id="dark-mode" class="text-2xl prevent-right-click px-3 py-1 rounded-lg">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- Main Content -->
+    <div class="max-w-6xl mx-auto px-4 py-8 grid md:grid-cols-3 gap-6">
+        <!-- Left Sidebar -->
+        <aside class="md:col-span-1 space-y-6">
+            <!-- Profile -->
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <img src="https://cdn.pixabay.com/photo/2016/04/22/04/57/graduation-1345143_1280.png" alt="Profile Picture" class="w-32 h-32 mx-auto rounded-full border-4 border-gray-600 prevent-right-click" />
+                <h1 class="text-2xl font-bold mt-4">Your Name</h1>
+                <h2 class="text-lg text-blue-600">Your Title</h2>
+            </div>
+            <!-- Personal Info -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Personal Info</h3>
+                <ul class="space-y-2">
+                    <li class="flex items-center"><i class="fas fa-venus-mars text-blue-600 w-6 flex justify-center"></i><span class="ml-3">Gender</span></li>
+                    <li class="flex items-center"><i class="fas fa-birthday-cake text-blue-600 w-6 flex justify-center"></i><span class="ml-3">Date of Birth</span></li>
+                    <li class="flex items-center"><i class="fas fa-language text-blue-600 w-6 flex justify-center"></i><span class="ml-3">Languages</span></li>
+                    <li class="flex items-center"><i class="fas fa-map-marker-alt text-blue-600 w-6 flex justify-center"></i><span class="ml-3">Location</span></li>
                 </ul>
             </div>
-<!-- Change the format of: https://drive.google.com/uc?export=download&id=1DadSuhC-tRfkYaLoTGLbqsuu1QMch90l i.e. https://drive.google.com/uc?export=download&id=_link_id using the 'link_id' from drive file link by "sharing the file with access (Anyone with a link)" -->
-            <h4><a href="https://drive.google.com/uc?export=download&id=1HxtPf9FBAW0HVJh4lBDjwZ-IJF1JFcXq">Resume&#x1F517</a></h4>
-            
-            <!--<div class="references-section"><!h3 class="main-title">References<!/h3></div>-->
-        </section>
-        <section class="right-section center">
-            <div class="info">
-                <div class="icons">
-                    <!-- mode-togg -->
-                    <a id="icon"><i id="dark-mode" class="toggler far fa-moon"></i></a>
-
-                    <!-- top-togg -->
-                    <a href="#top"><script src="https://cdn.lordicon.com/lordicon.js"></script><lord-icon src="https://cdn.lordicon.com/dwoxxgps.json" alt="go_to_top" trigger="loop-on-hover" delay="20" state="hover-arrow-up-2" colors="primary:#7e7eae" id="btn"></lord-icon></a>
-                </div>
-                <script src="toggle.js"></script>
-                </a>
-                <h2>About Me</h2>
-                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam deserunt quibusdam, voluptates alias nam quidem debitis animi tempore beatae, qui incidunt, distinctio et recusandae aperiam. Non corrupti laudantium voluptas numquam cum possimus blanditiis vero provident minus accusamus velit ex quis labore molestias eveniet iusto voluptatibus reprehenderit eius neque, animi voluptates.</p>
-                <h2>Education</h2>
-                <div class="timeline">
-                    <div class="left-tl-content">
-                        <h5>Name_of_Institution1</h5>
-                        <p>Duration</p>
+            <!-- Tech Focus -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Tech That Powers My Work</h3>
+                <p class="text-gray-600"><strong>Your tech stack summary here.</strong></p>
+            </div>
+            <!-- Skills -->
+            <div class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Skills</h3>
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-blue-600 font-medium">Skill 1</label>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
                     </div>
-                    <div class="right-tl-content">
-                        <div class="tl-content"><span>Specialiation</span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil excepturi eveniet facilis esse ut suscipit commodi dignissimos deleniti eligendi tempora.</p>
-                        </div>
+                    <div>
+                        <label class="block text-blue-600 font-medium">Skill 2</label>
+                        <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
                     </div>
-                    <div class="left-tl-content">
-                        <h5>Name_of_Institution2</h5>
-                        <p>Duration</p>
-                    </div>
-                    <div class="right-tl-content">
-                        <div class="tl-content"><span>Specialiation</span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil excepturi eveniet facilis esse ut suscipit commodi dignissimos deleniti eligendi tempora.</p>
-                        </div>
-                    </div>
-                </div>
-                <h2>Experience</h2>
-                <div class="timeline">
-                    <div class="left-tl-content">
-                        <h5 class="tl-title">Company_Name1</h5>
-                        <p class="para">Duration</p>
-                    </div>
-                    <div class="right-tl-content">
-                        <div class="tl-content"><span>Job Profile</span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil excepturi eveniet facilis esse ut suscipit commodi dignissimos deleniti eligendi tempora.</p>
-                        </div>
-                    </div>
-                    <div class="left-tl-content">
-                        <h5 class="tl-title">Company_Name2</h5>
-                        <p class="para">Duration</p>
-                    </div>
-                    <div class="right-tl-content">
-                        <div class="tl-content"><span>Job Profile</span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil excepturi eveniet facilis esse ut suscipit commodi dignissimos deleniti eligendi tempora.</p>
-                        </div>
-                    </div>
-                </div>
-                <h2>Projects</h2>
-                <div class="timeline">
-                    <div class="left-tl-content">
-                        <a href="#Link to Project"><h5 class="tl-title">Proj1</h5></a>
-                        <p class="para">Duration</p>
-                    </div>
-                    <div class="right-tl-content">
-                        <div class="tl-content"><span>Type</span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil excepturi eveniet facilis esse ut suscipit commodi dignissimos deleniti eligendi tempora.</p>
-                        </div>
-                    </div>
-                    <div class="left-tl-content">
-                        <a href="#Link to Project"><h5 class="tl-title">Proj2</h5></a>
-                        <p class="para">Duration</p>
-                    </div>
-                    <div class="right-tl-content">
-                        <div class="tl-content"><span>Type</span>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil excepturi eveniet facilis esse ut suscipit commodi dignissimos deleniti eligendi tempora.</p>
-                        </div>
-                    </div>
-                </div>
-                <h2>Certificates</h2>
-                <div class="timeline">
-                    <div class="left-tl-content">
-                        <h5>Provider_1</h5>
-                        <p>Duration</p>
-                    </div>
-                    <div class="right-tl-content">
-                        <div class="tl-content"><span>Cert1</span>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, aliquam!</p>
-                        </div>
-                    </div>
-                    <div class="left-tl-content">
-                        <h5>Provider_2</h5>
-                        <p>Duration</p>
-                    </div>
-                    <div class="right-tl-content">
-                        <div class="tl-content"><span>Cert2</span>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit, aliquam!</p>
-                        </div>
-                    </div>
+                    <!-- Add more as needed -->
                 </div>
             </div>
-        </section>
-    </main>
-    <footer class="center">Inspired from: <a href="https://codepen.io/chih-hsi-chen/pen/KKpXLqR" target="_blank">RWD_Resume</a></footer>
+            <!-- Social Links -->
+            <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                <h3 class="text-xl font-semibold mb-4">Socials</h3>
+                <div class="flex justify-center space-x-6 text-2xl">
+                    <a href="#" class="hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="hover:text-blue-600"><i class="fab fa-github"></i></a>
+                    <a href="#" class="hover:text-blue-600"><i class="fab fa-discord"></i></a>
+                    <a href="#" class="hover:text-blue-600"><i class="fas fa-code"></i></a>
+                </div>
+            </div>
+            <!-- Contact -->
+            <div class="bg-white p-6 rounded-lg shadow-md text-center space-y-4">
+                <h3 class="text-xl font-semibold">Contact Me</h3>
+                <p class="text-gray-600">A brief message to invite connections or collaborations.</p>
+                <div class="flex justify-center space-x-4">
+                    <a href="mailto:your.email@example.com" class="universal-btn flex items-center text-sm">Email Me <i class="fas fa-envelope ml-2"></i></a>
+                    <a href="#" download class="universal-btn flex items-center text-sm">Download Resume <i class="fas fa-download ml-2"></i></a>
+                </div>
+            </div>
+        </aside>
+        <!-- Main Content -->
+        <main class="md:col-span-2 space-y-6">
+            <!-- About -->
+            <section id="about" class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">About Me</h3>
+                <p class="text-gray-600">Write a short bio about your professional journey, interests, and focus areas.</p>
+            </section>
+            <!-- Education -->
+            <section id="education" class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Education</h3>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-lg text-blue-600 font-medium">Your University</h4>
+                            <p class="static-blue">Year - Year</p>
+                        </div>
+                        <p>Degree or major description.</p>
+                    </div>
+                </div>
+                <!-- Add more as needed -->
+            </section>
+            <!-- Experience -->
+            <section id="experience" class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Experience</h3>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between items-center">
+                            <h4 class="text-lg text-blue-600 font-medium">Company Name</h4>
+                            <p class="static-blue">Month Year - Month Year</p>
+                        </div>
+                        <p><strong>Role Title:</strong> Brief description of your role and responsibilities.</p>
+                    </div>
+                </div>
+                <!-- Add more as needed -->
+            </section>
+            <!-- Projects -->
+            <section id="projects" class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Projects</h3>
+                <div class="space-y-2">
+                    <div class="collapsible">
+                        <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
+                            <h4 class="text-lg text-blue-600 font-medium">Project Title</h4>
+                            <span class="ml-auto text-sm static-blue">Month Year</span>
+                            <i class="fas fa-chevron-down ml-2"></i>
+                        </button>
+                        <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
+                            <p><strong>Type:</strong> Short description of project purpose and tech stack.</p>
+                            <a href="#" target="_blank" class="px-2 py-1 text-xs universal-btn">View on GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more as needed -->
+            </section>
+            <!-- Certificates -->
+            <section id="certificates" class="bg-white p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold mb-4">Certificates</h3>
+                <div class="space-y-2">
+                    <div class="collapsible">
+                        <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
+                            <h4 class="text-lg text-blue-600 font-medium">Certificate Title</h4>
+                            <span class="ml-auto text-sm static-blue">Year</span>
+                            <i class="fas fa-chevron-down ml-2"></i>
+                        </button>
+                        <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
+                            <p>Certificate description or issuing organization.</p>
+                            <a href="#" target="_blank" class="px-2 py-1 text-xs universal-btn">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more as needed -->
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
