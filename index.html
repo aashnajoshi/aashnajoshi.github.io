@@ -6,7 +6,7 @@
         <meta name="description" content="My online persona, which combines a résumé and portfolio to provide a concise overview about me!">
         <meta name="keywords" content="Aashna Joshi, Python Developer, Django Developer, AI Enthusiast, Resume, Portfolio">
         <link rel="shortcut icon" href="https://cdn0.iconfinder.com/data/icons/human-resources-29/66/5-128.png">
-        <title>Aashna Joshi - Digital Resume</title>
+        <title>Aashna Joshi | Digital Resume</title>
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
         <link rel="stylesheet" href="styles.css">
@@ -24,9 +24,7 @@
                     <li><a href="#certificates" class="hover:text-blue-600">Certificates</a></li>
                 </ul>
                 <!-- Right: Dark Mode Toggle -->
-                <button id="dark-mode" class="text-2xl prevent-right-click px-3 py-1 rounded-lg">
-                    <i class="fas fa-moon"></i>
-                </button>
+                <button id="dark-mode" class="text-2xl prevent-right-click px-3 py-1 rounded-lg"><i class="fas fa-moon"></i></button>
             </div>
         </nav>
         <!-- Main Content -->
@@ -35,7 +33,7 @@
             <aside class="md:col-span-1 space-y-6">
                 <!-- Profile -->
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <img src="./pic.png" alt="Profile Picture" class="w-32 h-32 mx-auto rounded-full border-4 border-gray-800 prevent-right-click">
+                    <img src="./pic.png" alt="Profile Picture" class="w-32 h-32 mx-auto rounded-full border-4 border-gray-600 prevent-right-click" loading="lazy">
                     <h1 class="text-2xl font-bold text-center mt-4">Aashna Joshi</h1>
                     <h2 class="text-lg text-center text-blue-600">Python Django Developer</h2>
                 </div>
@@ -43,68 +41,60 @@
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold mb-4">Personal Info</h3>
                     <ul class="space-y-2">
-                        <li class="flex items-center"><i class="fas fa-venus-mars mr-2 text-blue-600"></i><span>Female</span></li>
-                        <li class="flex items-center"><i class="fas fa-birthday-cake mr-2 text-blue-600"></i><span>05/12/2003</span></li>
-                        <li class="flex items-center"><i class="fas fa-language mr-2 text-blue-600"></i><span>English, Hindi</span></li>
-                        <li class="flex items-center"><i class="fas fa-map-marker-alt mr-2 text-blue-600"></i><span>Delhi, NCR</span></li>
+                        <li class="flex items-center"><span class="w-6 text-blue-600 flex justify-center"><i class="fas fa-venus-mars"></i></span><span class="ml-3">Female</span></li>
+                        <li class="flex items-center"><span class="w-6 text-blue-600 flex justify-center"><i class="fas fa-birthday-cake"></i></span><span class="ml-3">5<sup>th</sup> December, 2003</span></li>
+                        <li class="flex items-center"><span class="w-6 text-blue-600 flex justify-center"><i class="fas fa-language"></i></span><span class="ml-3">English, Hindi</span></li>
+                        <li class="flex items-center"><span class="w-6 text-blue-600 flex justify-center"><i class="fas fa-map-marker-alt"></i></span><span class="ml-3">Delhi, NCR</span></li>
                     </ul>
                 </div>
+                <!-- Tech Focus & Core Strengths -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-4">Tech That Powers My Work</h3>
+                    <i class="fas fa-code text-gray-800 mt-1 mr-2"></i><span class="text-gray-600">Turning complex problems into scalable solutions with <strong>Python, Django,</strong> and <strong>cloud-first backend design.</strong></span>
+                </div>
+                <!-- Skills -->
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold mb-4">Skills</h3>
                     <div class="space-y-4">
                         <div>
-                            <label class="block static-blue font-medium">Python</label>
-                            <div class="skill-bar">
-                                <div class="skill-fill" style="width: 95%"></div>
-                            </div>
+                            <label class="block text-blue-600 font-medium">Python</label>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 95%"></div></div>
                         </div>
                         <div>
-                            <label class="block static-blue font-medium">Git</label>
-                            <div class="skill-bar">
-                                <div class="skill-fill" style="width: 95%"></div>
-                            </div>
+                            <label class="block text-blue-600 font-medium">R</label>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
                         </div>
                         <div>
-                            <label class="block static-blue font-medium">Heroku</label>
-                            <div class="skill-bar">
-                                <div class="skill-fill" style="width: 70%"></div>
-                            </div>
+                            <label class="block text-blue-600 font-medium">Git</label>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 95%"></div></div>
                         </div>
                         <div>
-                            <label class="block static-blue font-medium">HTML & CSS</label>
-                            <div class="skill-bar">
-                                <div class="skill-fill" style="width: 90%"></div>
-                            </div>
+                            <label class="block text-blue-600 font-medium">Heroku</label>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div>
                         </div>
                         <div>
-                            <label class="block static-blue font-medium">JavaScript</label>
-                            <div class="skill-bar">
-                                <div class="skill-fill" style="width: 75%"></div>
-                            </div>
+                            <label class="block text-blue-600 font-medium">JavaScript</label>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
                         </div>
                         <div>
-                            <label class="block static-blue font-medium">PostgresSQL</label>
-                            <div class="skill-bar">
-                                <div class="skill-fill" style="width: 85%"></div>
-                            </div>
+                            <label class="block text-blue-600 font-medium">PostgresSQL</label>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
                         </div>
                         <div>
-                            <label class="block static-blue font-medium">MongoDB</label>
-                            <div class="skill-bar">
-                                <div class="skill-fill" style="width: 80%"></div>
-                            </div>
+                            <label class="block text-blue-600 font-medium">MongoDB</label>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
                         </div>
                         <div>
-                            <label class="block static-blue font-medium">Azure</label>
-                            <div class="skill-bar">
-                                <div class="skill-fill" style="width: 85%"></div>
-                            </div>
+                            <label class="block text-blue-600 font-medium">Azure</label>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
                         </div>
                         <div>
-                            <label class="block static-blue font-medium">AWS</label>
-                            <div class="skill-bar">
-                                <div class="skill-fill" style="width: 85%"></div>
-                            </div>
+                            <label class="block text-blue-600 font-medium">AWS</label>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div>
+                            <label class="block text-blue-600 font-medium">Docker & Kubernetes</label>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
                         </div>
                     </div>
                 </div>
@@ -118,16 +108,14 @@
                         <a href="https://www.leetcode.com/aashnajoshi" target="_blank" class="hover:text-blue-600"><i class="fa-solid fa-code"></i></a>
                     </div>
                 </div>
-                <!-- Contact -->
-                <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <h3 class="text-xl font-semibold mb-4">Contact Me</h3> <br>
+                <!-- Contact & Resume -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center space-y-4">
+                    <h3 class="text-xl font-semibold">Contact Me</h3>
                     <p class="text-gray-600">Feel free to reach out for opportunities or collaborations!</p>
-                    <a href="mailto:aashna.joshi03@gmail.com" class="universal-btn">Email Me <i class="fas fa-envelope ml-2"></i></a>
-                </div>
-                <!-- Resume Download -->
-                <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <h3 class="text-xl font-semibold mb-4">Download Resume</h3>
-                    <a href="https://drive.google.com/uc?export=download&id=1HxtPf9FBAW0HVJh4lBDjwZ-IJF1JFcXq" download class="universal-btn">Download <i class="fas fa-download ml-2"></i></a>
+                    <div class="flex justify-center space-x-4">
+                        <a href="mailto:aashna.joshi03@gmail.com" class="universal-btn flex items-center text-sm">Email Me <i class="fas fa-envelope ml-2"></i></a>
+                        <a href="https://drive.google.com/uc?export=download&id=1HxtPf9FBAW0HVJh4lBDjwZ-IJF1JFcXq" download class="universal-btn flex items-center text-sm">Download Resume <i class="fas fa-download ml-2"></i></a>
+                    </div>
                 </div>
             </aside>
             <!-- Right Section -->
@@ -143,15 +131,15 @@
                     <div class="space-y-4">
                         <div>
                             <div class="flex justify-between items-center">
-                                <h4 class="text-lg static-blue font-medium">J.C. Bose University of Science and Technology, YMCA</h4>
-                                <p class="text-blue-600">2021 - 2025</p>
+                                <h4 class="text-lg text-blue-600 font-medium">J.C. Bose University of Science and Technology, YMCA</h4>
+                                <p class="static-blue">2021 - 2025</p>
                             </div>
                             <p>BTech in Computer Science with specialization in AI and ML, maintaining a 7.25 GPA.</p>
                         </div>
                         <div>
                             <div class="flex justify-between items-center">
-                                <h4 class="text-lg static-blue font-medium">DAV Public School</h4>
-                                <p class="text-blue-600">2005 - 2021</p>
+                                <h4 class="text-lg text-blue-600 font-medium">DAV Public School</h4>
+                                <p class="static-blue">2005 - 2021</p>
                             </div>
                             <p>Secured 92.2% and 78.2% in 10th and 12th grade respectively.</p>
                         </div>
@@ -163,24 +151,24 @@
                     <div class="space-y-4">
                         <div>
                             <div class="flex justify-between items-center">
-                                <h4 class="text-lg static-blue font-medium">OS Code Solutions</h4>
-                                <p class="text-blue-600">Feb 2025 - Ongoing</p>
+                                <h4 class="text-lg text-blue-600 font-medium">OS Code Solutions</h4>
+                                <p class="static-blue">Feb 2025 - Ongoing</p>
                             </div>
-                            <p>Python Developer Intern: Contributing to web-app development using Django, focusing on backend solutions and scalable architectures.</p>
+                            <p><strong>Python Developer Intern:</strong> Contributing to web-app development using Django, focusing on backend solutions and scalable architectures.</p>
                         </div>
                         <div>
                             <div class="flex justify-between items-center">
-                                <h4 class="text-lg static-blue font-medium">Augmented Transformations Pvt Ltd.</h4>
-                                <p class="text-blue-600">Oct 2024 - Dec 2024</p>
+                                <h4 class="text-lg text-blue-600 font-medium">Augmented Transformations Pvt Ltd.</h4>
+                                <p class="static-blue">Oct 2024 - Dec 2024</p>
                             </div>
-                            <p>Trainee Software Engineer: Contributed to backend development with features like form submissions, user authentication, and Django automation tasks.</p>
+                            <p><strong>Trainee Software Engineer:</strong> Contributed to backend development with features like form submissions, user authentication, and Django automation tasks.</p>
                         </div>
                         <div>
                             <div class="flex justify-between items-center">
-                                <h4 class="text-lg static-blue font-medium">CodeWay</h4>
-                                <p class="text-blue-600">Mar 2024 - Apr 2024</p>
+                                <h4 class="text-lg text-blue-600 font-medium">CodeWay</h4>
+                                <p class="static-blue">Mar 2024 - Apr 2024</p>
                             </div>
-                            <p>Python Programming Intern: Developed mini-applications like To-Do List, Calculator, and Weather App with API integration.</p>
+                            <p><strong>Python Programming Intern:</strong> Developed mini-applications like To-Do List, Calculator, and Weather App with API integration.</p>
                         </div>
                     </div>
                 </section>
@@ -189,73 +177,46 @@
                     <h3 class="text-xl font-semibold mb-4">Projects</h3>
                     <div class="space-y-2">
                         <div class="collapsible">
-                            <button class="collapsible-header flex justify-between items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <div>
-                                    <h4 class="text-lg static-blue font-medium"><a href="https://github.com/aashnajoshi/VidStream" target="_blank">VidStream</a></h4>
-                                    <p class="text-blue-600 text-sm">Jan 2025 - Ongoing</p>
-                                </div>
-                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
+                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://github.com/aashnajoshi/VidStream" target="_blank">VidStream</a></h4>
+                                <span class="ml-auto text-sm static-blue">Jan 2025 - Ongoing</span>
+                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
                             </button>
                             <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <span>Solo Project</span>
-                                <p>A Django-based video streaming platform for user sign-up, video uploads, and streaming. It includes features for user authentication, video management, and a content gallery.</p>
+                                <p><strong>Solo Project:</strong> A Django-based video streaming platform for user sign-up, video uploads, and streaming. It includes features for user authentication, video management, and a content gallery.</p>
                                 <a href="https://github.com/aashnajoshi/VidStream" target="_blank" class="px-2 py-1 text-xs universal-btn">Github Link</a>
                             </div>
                         </div>
                         <div class="collapsible">
-                            <button
-                                class="collapsible-header flex justify-between items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <div>
-                                    <h4 class="text-lg static-blue font-medium"><a href="https://github.com/aashnajoshi/EmotiSense" target="_blank">EmotiSense</a></h4>
-                                    <p class="text-blue-600 text-sm">Nov 2024</p>
-                                </div>
-                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
+                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://github.com/aashnajoshi/ImageInk" target="_blank">ImageInk</a></h4>
+                                <span class="ml-auto text-sm static-blue">Oct 2024</span>
+                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
                             </button>
                             <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <span>Team Project</span>
-                                <p>A Python tool that predicts emoji emotions (positive, neutral, or negative) with confidence scores. It offers a pre-trained model for immediate use and an option to retrain it with custom datasets.</p>
-                                <a href="https://github.com/aashnajoshi/EmotiSense" target="_blank" class="px-2 py-1 text-xs universal-btn">Github Link</a>
-                            </div>
-                        </div>
-                        <div class="collapsible">
-                            <button class="collapsible-header flex justify-between items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <div>
-                                    <h4 class="text-lg static-blue font-medium"><a href="https://github.com/aashnajoshi/ImageInk" target="_blank">ImageInk</a></h4>
-                                    <p class="text-blue-600 text-sm">Oct 2024</p>
-                                </div>
-                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
-                            </button>
-                            <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <span>Team Project</span>
-                                <p>AI-powered project that generates creative stories from images using Azure’s image analysis and OpenAI's language model. Available with both console-based and Streamlit-based interfaces for easy interaction.</p>
+                                <p><strong>Team Project:</strong> AI-powered project that generates creative stories from images using Azure’s image analysis and OpenAI's language model. Available with both console-based and Streamlit-based interfaces for easy interaction.</p>
                                 <a href="https://github.com/aashnajoshi/ImageInk" target="_blank" class="px-2 py-1 text-xs universal-btn">Github Link</a>
                             </div>
                         </div>
                         <div class="collapsible">
-                            <button class="collapsible-header flex justify-between items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <div>
-                                    <h4 class="text-lg static-blue font-medium"><a href="https://github.com/aashnajoshi/MoodBeats" target="_blank">MoodBeats</a></h4>
-                                    <p class="text-blue-600 text-sm">Oct 2023 - Jan 2024</p>
-                                </div>
-                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
+                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://github.com/aashnajoshi/MoodBeats" target="_blank">MoodBeats</a></h4>
+                                <span class="ml-auto text-sm static-blue">Oct 2023 - Jan 2024</span>
+                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
                             </button>
                             <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <span>Team Project</span>
-                                <p>A Python-based system using OpenCV to detect facial expressions and emotions, then recommends music based on the user's emotional state to enhance the listening experience.</p>
+                                <p><strong>Team Project:</strong> A Python-based system using OpenCV to detect facial expressions and emotions, then recommends music based on the user's emotional state to enhance the listening experience.</p>
                                 <a href="https://github.com/aashnajoshi/MoodBeats" target="_blank" class="px-2 py-1 text-xs universal-btn">Github Link</a>
                             </div>
                         </div>
                         <div class="collapsible">
-                            <button class="collapsible-header flex justify-between items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <div>
-                                    <h4 class="text-lg static-blue font-medium">TeleBots</h4>
-                                    <p class="text-blue-600 text-sm">Jul 2020 - Aug 2023</p>
-                                </div>
-                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
+                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0">TeleBots</h4>
+                                <span class="ml-auto text-sm static-blue">Jul 2020 - Aug 2023</span>
+                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
                             </button>
                             <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <span>Team Effort</span>
-                                <p>Developed 30+ Telegram bots in Python for various tasks such as file management and URL uploads, improving digital interactions for clients across multiple use cases.</p>
+                                <p><strong>Team Effort:</strong> Developed 30+ Telegram bots in Python for various tasks such as file management and URL uploads, improving digital interactions for clients across multiple use cases.</p>
                             </div>
                         </div>
                     </div>
@@ -265,117 +226,90 @@
                     <h3 class="text-xl font-semibold mb-4">Certificates</h3>
                     <div class="space-y-2">
                         <div class="collapsible">
-                            <button class="collapsible-header flex justify-between items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <div>
-                                    <h4 class="text-lg static-blue font-medium"><a href="https://www.credly.com/badges/37ee2439-6934-44c2-881b-19e0e14e45ad" target="_blank">AWS Educate</a></h4>
-                                    <p class="text-blue-600 text-sm">Feb 2025</p>
-                                </div>
-                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
+                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://www.credly.com/badges/37ee2439-6934-44c2-881b-19e0e14e45ad" target="_blank">Cloud Computing 101, AWS Educate</a></h4>
+                                <span class="ml-auto text-sm static-blue">Feb 2025</span>
+                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
                             </button>
                             <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <span>Introduction to Cloud 101</span>
-                                <p>Completed the AWS Educate Introduction to Cloud 101 course, gaining foundational knowledge in cloud computing, global infrastructure, and core AWS services. Explored key concepts like elasticity, scalability, and pricing models to understand cloud benefits and usage.</p>
+                                <p>Gained foundational knowledge in cloud computing, global infrastructure, and core AWS services.</p>
                                 <a href="https://www.credly.com/badges/37ee2439-6934-44c2-881b-19e0e14e45ad" target="_blank" class="px-2 py-1 text-xs universal-btn">Certificate Link</a>
                             </div>
                         </div>
                         <div class="collapsible">
-                            <button class="collapsible-header flex justify-between items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <div>
-                                    <h4 class="text-lg static-blue font-medium"><a href="https://learn.mongodb.com/c/tHoi5AVwSnGE8YS7PR55bA" target="_blank">MongoDB</a></h4>
-                                    <p class="text-blue-600 text-sm">Feb 2025</p>
-                                </div>
-                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
+                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://learn.mongodb.com/c/tHoi5AVwSnGE8YS7PR55bA" target="_blank">Python Developer Path, MongoDB</a></h4>
+                                <span class="ml-auto text-sm static-blue">Feb 2025</span>
+                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
                             </button>
                             <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <span>MongoDB Python Developer Path</span>
-                                <p>Completed the MongoDB Python Developer Path, mastering CRUD operations, data modeling, aggregation pipelines, and integration with Python (PyMongo). Gained experience in advanced features like MongoDB Atlas Search for enhanced performance.</p>
+                                <p>Mastered CRUD operations, data modeling, aggregation pipelines, and MongoDB Atlas integration using PyMongo in Python.</p>
                                 <a href="https://learn.mongodb.com/c/tHoi5AVwSnGE8YS7PR55bA" target="_blank" class="px-2 py-1 text-xs universal-btn">Certificate Link</a>
                             </div>
                         </div>
                         <div class="collapsible">
-                            <button
-                                class="collapsible-header flex justify-between items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <div>
-                                    <h4 class="text-lg static-blue font-medium"><a href="https://learn.microsoft.com/api/achievements/share/en-gb/aashnajoshi/UYQ827M3" target="_blank">Microsoft</a></h4>
-                                    <p class="text-blue-600 text-sm">Dec 2024</p>
-                                </div>
-                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
+                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://learn.microsoft.com/api/achievements/share/en-gb/aashnajoshi/UYQ827M3" target="_blank">AI Skills Challenge, Microsoft</a></h4>
+                                <span class="ml-auto text-sm static-blue">Dec 2024</span>
+                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
                             </button>
                             <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <span>AI Skills Challenge</span>
-                                <p>Completed the AI Skills Challenge, gaining hands-on experience in building cloud-native AI apps, integrating Azure OpenAI, Microsoft Fabric, and securing AI solutions with Azure tools. Earned a digital badge to showcase AI skills.</p>
+                                <p>Learned to build secure, cloud-native AI apps using Azure OpenAI, Microsoft Fabric, and Azure management tools.</p>
                                 <a href="https://learn.microsoft.com/api/achievements/share/en-gb/aashnajoshi/UYQ827M3" target="_blank" class="px-2 py-1 text-xs universal-btn">Certificate Link</a>
                             </div>
                         </div>
                         <div class="collapsible">
-                            <button class="collapsible-header flex justify-between items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <div>
-                                    <h4 class="text-lg static-blue font-medium"><a href="https://learn.microsoft.com/en-gb/users/aashnajoshi/achievements/zkqjklu2" target="_blank">Microsoft</a></h4>
-                                    <p class="text-blue-600 text-sm">Sep 2024</p>
-                                </div>
-                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
+                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://learn.microsoft.com/en-gb/users/aashnajoshi/achievements/zkqjklu2" target="_blank">GitHub Foundations, Microsoft</a></h4>
+                                <span class="ml-auto text-sm static-blue">Sep 2024</span>
+                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
                             </button>
                             <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <span>GitHub Foundations</span>
-                                <p>Completed the GitHub Foundations course, covering essential Git features like repository management, commits, and branches. Explored GitHub Copilot to improve development processes.</p>
+                                <p>Covered Git essentials and GitHub Copilot to streamline development workflows and manage version control effectively.</p>
                                 <a href="https://learn.microsoft.com/en-gb/users/aashnajoshi/achievements/zkqjklu2" target="_blank" class="px-2 py-1 text-xs universal-btn">Certificate Link</a>
                             </div>
                         </div>
                         <div class="collapsible">
-                            <button class="collapsible-header flex justify-between items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <div>
-                                    <h4 class="text-lg static-blue font-medium"><a href="https://learn.microsoft.com/en-gb/users/aashnajoshi/achievements/zkqjklu2" target="_blank">Microsoft</a></h4>
-                                    <p class="text-blue-600 text-sm">Sep 2024</p>
-                                </div>
-                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
+                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://learn.microsoft.com/en-gb/users/aashnajoshi/achievements/zkqjklu2" target="_blank">Azure AI Services, Microsoft</a></h4>
+                                <span class="ml-auto text-sm static-blue">Sep 2024</span>
+                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
                             </button>
                             <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <span>Get Started with Azure AI Services</span>
-                                <p>Completed a course on AI concepts and Azure services for developing AI solutions. Gained practical knowledge in AI workloads and Azure tools for AI-driven applications.</p>
+                                <p>Learned Azure AI tools and services for building and deploying AI-based applications and managing workloads.</p>
                                 <a href="https://learn.microsoft.com/en-gb/users/aashnajoshi/achievements/zkqjklu2" target="_blank" class="px-2 py-1 text-xs universal-btn">Certificate Link</a>
                             </div>
                         </div>
                         <div class="collapsible">
-                            <button class="collapsible-header flex justify-between items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <div>
-                                    <h4 class="text-lg static-blue font-medium"><a href="https://www.linkedin.com/posts/aashnajoshi_ai-artificialintelligence-azureai-activity-7189551404603052033-ZfG-?utm_source=share&utm_medium=member_desktop" target="_blank">Honeywell</a></h4>
-                                    <p class="text-blue-600 text-sm">Mar 2024</p>
-                                </div>
-                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
+                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://www.linkedin.com/posts/aashnajoshi_ai-artificialintelligence-azureai-activity-7189551404603052033-ZfG-?utm_source=share&utm_medium=member_desktop" target="_blank">Azure AI Workshop, Honeywell</a></h4>
+                                <span class="ml-auto text-sm static-blue">Mar 2024</span>
+                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
                             </button>
                             <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <span>AWS Azure AI</span>
-                                <p>Completed a workshop covering Azure AI, machine learning, MLOps, Azure ML features, and DevOps lifecycle. Gained hands-on knowledge applicable to real-world AI and Azure environments.</p>
-                                <a href="https://www.linkedin.com/posts/aashnajoshi_ai-artificialintelligence-azureai-activity-7189551404603052033-ZfG-?utm_source=share&utm_medium=member_desktop" target="_blank" class="px-2 py-1 text-xs universal-btn">Certificate Link</a>
+                                <p>Explored Azure ML, MLOps, DevOps lifecycle, and building AI applications with hands-on exposure.</p>
+                                <a href="https://www.linkedin.com/posts/aashnajoshi_ai-artificialintelligence-azureai-activity-7189551404603052033-ZfG-" target="_blank" class="px-2 py-1 text-xs universal-btn">Certificate Link</a>
                             </div>
                         </div>
                         <div class="collapsible">
-                            <button
-                                class="collapsible-header flex justify-between items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <div>
-                                    <h4 class="text-lg static-blue font-medium"><a href="https://moonshot.scaler.com/s/sl/tBds1fw4r_" target="_blank">Scalar</a></h4>
-                                    <p class="text-blue-600 text-sm">Mar 2024</p>
-                                </div>
-                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
+                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://moonshot.scaler.com/s/sl/tBds1fw4r_" target="_blank">Docker & Kubernetes, Scalar</a></h4>
+                                <span class="ml-auto text-sm static-blue">Mar 2024</span>
+                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
                             </button>
                             <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <span>Fundamentals of Docker & Kubernetes</span>
-                                <p>Completed a MasterClass on Docker, Kubernetes, and DevOps best practices, laying a strong foundation in containerization and orchestration to streamline software development and deployment.</p>
+                                <p>Covered Docker, Kubernetes, and DevOps principles to enable container-based app development and deployment.</p>
                                 <a href="https://moonshot.scaler.com/s/sl/tBds1fw4r_" target="_blank" class="px-2 py-1 text-xs universal-btn">Certificate Link</a>
                             </div>
                         </div>
                         <div class="collapsible">
-                            <button
-                                class="collapsible-header flex justify-between items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <div>
-                                    <h4 class="text-lg static-blue font-medium"><a href="https://moonshot.scaler.com/s/sl/1r85vC-8Ui" target="_blank">Scalar</a></h4>
-                                    <p class="text-blue-600 text-sm">Jan 2024</p>
-                                </div>
-                                <i class="fas fa-chevron-down transition-transform duration-300"></i>
+                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
+                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://moonshot.scaler.com/s/sl/1r85vC-8Ui" target="_blank">S.O.L.I.D. Principles, Scalar</a></h4>
+                                <span class="ml-auto text-sm static-blue">Jan 2024</span>
+                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
                             </button>
                             <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <span>S.O.L.I.D. Principles Every Developer Must Know</span>
-                                <p>Completed a MasterClass on the S.O.L.I.D principles, focusing on object-oriented design for better code quality and scalable software applications.</p>
+                                <p>Learned key object-oriented principles (SRP, OCP, LSP, ISP, DIP) for writing maintainable, clean code.</p>
                                 <a href="https://moonshot.scaler.com/s/sl/1r85vC-8Ui" target="_blank" class="px-2 py-1 text-xs universal-btn">Certificate Link</a>
                             </div>
                         </div>
