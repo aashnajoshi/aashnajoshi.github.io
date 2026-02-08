@@ -13,18 +13,30 @@
     </head>
     <body class="text-gray-800 transition-colors duration-300">
         <!-- Navigation -->
-        <nav class="sticky top-0 bg-white shadow-md z-10">
+        <nav class="sticky top-0 bg-white shadow-md z-10 transition-colors duration-300">
             <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-                <!-- Left: Navigation links -->
-                <ul class="flex space-x-4">
+                <!-- Left: Navigation links (hidden on mobile) -->
+                <ul id="nav-menu" class="hidden md:flex space-x-4 transition-all duration-300">
                     <li><a href="#about" class="hover:text-blue-600">About</a></li>
                     <li><a href="#education" class="hover:text-blue-600">Education</a></li>
                     <li><a href="#experience" class="hover:text-blue-600">Experience</a></li>
                     <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
                     <li><a href="#certificates" class="hover:text-blue-600">Certificates</a></li>
                 </ul>
+                <!-- Mobile menu (hamburger) -->
+                <button id="menu-toggle" class="md:hidden text-2xl px-3 py-1 rounded-lg"><i class="fas fa-bars"></i></button>
                 <!-- Right: Dark Mode Toggle -->
                 <button id="dark-mode" class="text-2xl prevent-right-click px-3 py-1 rounded-lg"><i class="fas fa-moon"></i></button>
+            </div>
+            <!-- Mobile Navigation Menu (hidden by default) -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 transition-all duration-300">
+                <ul class="flex flex-col space-y-2 px-4 py-4">
+                    <li><a href="#about" class="block hover:text-blue-600 py-2">About</a></li>
+                    <li><a href="#education" class="block hover:text-blue-600 py-2">Education</a></li>
+                    <li><a href="#experience" class="block hover:text-blue-600 py-2">Experience</a></li>
+                    <li><a href="#projects" class="block hover:text-blue-600 py-2">Projects</a></li>
+                    <li><a href="#certificates" class="block hover:text-blue-600 py-2">Certificates</a></li>
+                </ul>
             </div>
         </nav>
         <!-- Main Content -->
@@ -33,7 +45,9 @@
             <aside class="md:col-span-1 space-y-6">
                 <!-- Profile -->
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <img src="./pic.png" alt="Profile Picture" class="w-32 h-32 mx-auto rounded-full border-4 border-gray-600 prevent-right-click" loading="lazy">
+                    <div class="w-32 h-32 mx-auto flex items-center justify-center rounded-full border-4 border-gray-950 overflow-hidden bg-black">
+                        <img src="./pic.png" alt="Profile Picture" class="object-cover prevent-right-click" loading="lazy">
+                    </div>
                     <h1 class="text-2xl font-bold text-center mt-4">Aashna Joshi</h1>
                     <h2 class="text-lg text-center text-blue-600">Python Django Developer</h2>
                 </div>
@@ -50,50 +64,50 @@
                 <!-- Tech Focus & Core Strengths -->
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold mb-4">Tech That Powers My Work</h3>
-                    <i class="fas fa-code text-gray-800 mt-1 mr-2"></i><span class="text-gray-600">Turning complex problems into scalable solutions with <strong>Python, Django,</strong> and <strong>cloud-first backend design.</strong></span>
+                    <i class="fas fa-code text-gray-800 mt-1 mr-2"></i><span class="text-gray-600">Turning complex problems into scalable solutions with <strong>Python, Django, PostgresSQL</strong> and <strong>Cloud-First Backend Design</strong>!</span>
                 </div>
                 <!-- Skills -->
                 <div class="bg-white p-6 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold mb-4">Skills</h3>
                     <div class="space-y-4">
                         <div>
-                            <label class="block font-medium">Python</label>
+                            <label class="block font-medium text-blue-600">Python</label>
                             <div class="skill-bar"><div class="skill-fill" style="width: 97%"></div></div>
                         </div>
                         <div>
-                            <label class="block font-medium">R</label>
+                            <label class="block font-medium text-blue-600">R</label>
                             <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
                         </div>
                         <div>
-                            <label class="block font-medium">Git</label>
+                            <label class="block font-medium text-blue-600">Git</label>
                             <div class="skill-bar"><div class="skill-fill" style="width: 95%"></div></div>
                         </div>
                         <div>
-                            <label class="block font-medium">Heroku</label>
+                            <label class="block font-medium text-blue-600">Heroku</label>
                             <div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div>
                         </div>
                         <div>
-                            <label class="block font-medium">JavaScript</label>
+                            <label class="block font-medium text-blue-600">JavaScript</label>
                             <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
                         </div>
                         <div>
-                            <label class="block font-medium">PostgresSQL</label>
+                            <label class="block font-medium text-blue-600">PostgresSQL</label>
                             <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
                         </div>
                         <div>
-                            <label class="block font-medium">MongoDB</label>
+                            <label class="block font-medium text-blue-600">MongoDB</label>
                             <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
                         </div>
                         <div>
-                            <label class="block font-medium">Azure</label>
+                            <label class="block font-medium text-blue-600">Azure</label>
                             <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
                         </div>
                         <div>
-                            <label class="block font-medium">AWS</label>
+                            <label class="block font-medium text-blue-600">AWS</label>
                             <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
                         </div>
                         <div>
-                            <label class="block font-medium">Docker & Kubernetes</label>
+                            <label class="block font-medium text-blue-600">Docker & Kubernetes</label>
                             <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
                         </div>
                     </div>
@@ -101,7 +115,7 @@
                 <!-- Socials -->
                 <div class="bg-white p-6 rounded-lg shadow-md text-center">
                     <h3 class="text-xl font-semibold mb-4">Socials</h3>
-                    <div class="flex justify-center space-x-6 text-2xl">
+                    <div class="flex justify-center gap-4 text-2xl">
                         <a href="https://linkedin.com/in/aashnajoshi" target="_blank" class="hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
                         <a href="https://github.com/aashnajoshi" target="_blank" class="hover:text-blue-600"><i class="fab fa-github"></i></a>
                         <a href="https://www.discordapp.com/users/1432238432591024178" target="_blank" class="hover:text-blue-600"><i class="fab fa-discord"></i></a>
@@ -112,9 +126,9 @@
                 <div class="bg-white p-6 rounded-lg shadow-md text-center space-y-4">
                     <h3 class="text-xl font-semibold">Contact Me</h3>
                     <p class="text-gray-600">Feel free to reach out for opportunities or collaborations!</p>
-                    <div class="flex justify-center space-x-4">
-                        <a href="mailto:aashna.joshi03@gmail.com" class="universal-btn flex items-center text-sm">Email Me <i class="fas fa-envelope ml-2"></i></a>
-                        <a href="https://drive.google.com/uc?export=download&id=1GmW7FJB9n-Fu5lRHTK_VLUqYKU3YjZTP" download class="universal-btn flex items-center text-sm">Download Resume <i class="fas fa-download ml-2"></i></a>
+                    <div class="flex w-full">
+                        <a href="mailto:aashna.joshi03@gmail.com" class="universal-btn flex-1 flex items-center justify-center text-sm">Email Me <i class="fas fa-envelope ml-2"></i></a>
+                        <a href="https://drive.google.com/uc?export=download&id=1GmW7FJB9n-Fu5lRHTK_VLUqYKU3YjZTP" download class="universal-btn flex-1 flex items-center justify-center text-sm">Download Resume <i class="fas fa-download ml-2"></i></a>
                     </div>
                 </div>
             </aside>
@@ -235,7 +249,7 @@
                 <!-- Certificates -->
                 <section id="certificates" class="bg-white p-6 rounded-lg shadow-md">
                     <h3 class="text-xl font-semibold mb-4">Certificates</h3>
-                    <div class="space-y-2">
+                    <div class="space-y-2 certificate-items">
                         <div class="collapsible">
                             <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
                                 <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://www.credly.com/badges/37ee2439-6934-44c2-881b-19e0e14e45ad" target="_blank">Cloud Computing 101, AWS Educate</a></h4>

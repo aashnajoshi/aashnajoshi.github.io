@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
     const toggleButton = document.getElementById('dark-mode');
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = mobileMenu.querySelectorAll('a');
     const savedMode = localStorage.getItem('lightMode');
     const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     const initialMode = savedMode || (systemPrefersDark ? 'dark' : 'light');
@@ -24,6 +27,26 @@ document.addEventListener('DOMContentLoaded', () => {
             const currentMode = body.getAttribute('data-light-mode');
             const newMode = currentMode === 'light' ? 'dark' : 'light';
             applyTheme(newMode);
+        });
+    }
+
+    // Mobile menu toggle
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close mobile menu when a link is clicked
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                const icon = menuToggle.querySelector('i');
+                icon.classList.add('fa-bars');
+                icon.classList.remove('fa-times');
+            });
         });
     }
 

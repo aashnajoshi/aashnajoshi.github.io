@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 html {
@@ -39,12 +39,12 @@ button[type="button"] {
 
 .skill-fill {
     height: 100%;
-    background-color: #87CEEB;
+    background-color: #06B6D4;
     border-radius: 0.375rem;
 }
 
 .static-blue {
-    color: #87CEEB !important;
+    color: #06B6D4 !important;
 }
 
 .universal-btn {
@@ -78,7 +78,11 @@ body.dark-mode .skill-bar {
 }
 
 body.dark-mode .skill-fill {
-    background-color: #3BA0C9;
+    background-color: #22D3EE;
+}
+
+body.dark-mode .static-blue {
+    color: #22D3EE !important;
 }
 
 body.dark-mode {
@@ -144,4 +148,62 @@ body.dark-mode .text-blue-600 {
 
 body.dark-mode footer {
     color: #D1D5DB;
+}
+
+/* Mobile Navigation Styling */
+body.dark-mode #mobile-menu {
+    background-color: #374151;
+    border-top-color: #4B5563;
+}
+
+body.dark-mode #menu-toggle {
+    color: #F3F4F6;
+}
+
+#mobile-menu a {
+    color: inherit;
+}
+
+body.dark-mode #mobile-menu a {
+    color: #F3F4F6;
+}
+
+body.dark-mode #mobile-menu a:hover {
+    color: #60A5FA;
+}
+
+/* Certificate section responsive adjustments */
+.certificate-items .collapsible-header {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.certificate-items .collapsible-header h4 {
+    flex: 1 1 auto;
+    min-width: 200px;
+}
+
+.certificate-items .collapsible-header span {
+    flex: 0 0 auto;
+}
+
+@media (max-width: 768px) {
+    .certificate-items .collapsible-header {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .certificate-items .collapsible-header h4 {
+        flex: 1 1 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .certificate-items .collapsible-header span {
+        flex: 1 1 auto;
+    }
+
+    .certificate-items .collapsible-header i {
+        flex: 0 0 auto;
+        margin-left: auto;
+    }
 }
