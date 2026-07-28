@@ -1,354 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="My online persona, which combines a résumé and portfolio to provide a concise overview about me!">
-        <meta name="keywords" content="Aashna Joshi, Python Developer, Django Developer, AI Enthusiast, Resume, Portfolio">
-        <link rel="shortcut icon" href="https://cdn0.iconfinder.com/data/icons/human-resources-29/66/5-128.png">
-        <title>Aashna Joshi | Digital Resume</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body class="text-gray-800 transition-colors duration-300">
-        <!-- Navigation -->
-        <nav class="sticky top-0 bg-white shadow-md z-10 transition-colors duration-300">
-            <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-                <!-- Left: Navigation links (hidden on mobile) -->
-                <ul id="nav-menu" class="hidden md:flex space-x-4 transition-all duration-300">
-                    <li><a href="#about" class="hover:text-blue-600">About</a></li>
-                    <li><a href="#education" class="hover:text-blue-600">Education</a></li>
-                    <li><a href="#experience" class="hover:text-blue-600">Experience</a></li>
-                    <li><a href="#projects" class="hover:text-blue-600">Projects</a></li>
-                    <li><a href="#certificates" class="hover:text-blue-600">Certificates</a></li>
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="Portfolio of Aashna Joshi, Backend Engineer and AI Developer specializing in Python, Django, scalable systems, and AI-powered applications." name="description" />
+    <meta content="Aashna Joshi, Python Developer, Django Developer, AI Enthusiast, Resume, Portfolio" name="keywords" />
+    <link href="Developer.png" rel="shortcut icon" />
+    <title>Aashna Joshi | Backend Engineer & AI Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="mx-auto max-w-7xl px-4 py-4 sm:px-6 lg:px-8">
+        <nav class="theme-nav sticky top-4 z-20 mb-6 rounded-3xl px-4 py-3">
+            <div class="flex items-center justify-between gap-3">
+                <ul class="hidden items-center gap-5 text-sm font-medium md:flex" id="nav-menu">
+                    <li>
+                        <a class="transition" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="transition" href="#education">Education</a>
+                    </li>
+                    <li>
+                        <a class="transition" href="#experience">Experience</a>
+                    </li>
+                    <li>
+                        <a class="transition" href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a class="transition" href="#certificates">Certificates</a>
+                    </li>
                 </ul>
-                <!-- Mobile menu (hamburger) -->
-                <button id="menu-toggle" class="md:hidden text-2xl px-3 py-1 rounded-lg"><i class="fas fa-bars"></i></button>
-                <!-- Right: Dark Mode Toggle -->
-                <button id="dark-mode" class="text-2xl prevent-right-click px-3 py-1 rounded-lg"><i class="fas fa-moon"></i></button>
+                <div class="flex items-center gap-2 md:hidden">
+                    <button aria-controls="mobile-menu" aria-expanded="false" class="inline-flex h-11 w-11 items-center justify-center rounded-2xl text-xl" id="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+                <button aria-label="Toggle dark mode" class="prevent-right-click inline-flex h-11 w-11 items-center justify-center rounded-2xl text-xl" id="dark-mode">
+                    <i class="fas fa-moon"></i>
+                </button>
             </div>
-            <!-- Mobile Navigation Menu (hidden by default) -->
-            <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200 transition-all duration-300">
-                <ul class="flex flex-col space-y-2 px-4 py-4">
-                    <li><a href="#about" class="block hover:text-blue-600 py-2">About</a></li>
-                    <li><a href="#education" class="block hover:text-blue-600 py-2">Education</a></li>
-                    <li><a href="#experience" class="block hover:text-blue-600 py-2">Experience</a></li>
-                    <li><a href="#projects" class="block hover:text-blue-600 py-2">Projects</a></li>
-                    <li><a href="#certificates" class="block hover:text-blue-600 py-2">Certificates</a></li>
+            <div class="mt-3 hidden rounded-2xl p-2 md:hidden" id="mobile-menu">
+                <ul class="flex flex-col gap-1 py-1 text-sm font-medium">
+                    <li>
+                        <a class="block rounded-2xl px-3 py-2 transition" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="block rounded-2xl px-3 py-2 transition" href="#education">Education</a>
+                    </li>
+                    <li>
+                        <a class="block rounded-2xl px-3 py-2 transition" href="#experience">Experience</a>
+                    </li>
+                    <li>
+                        <a class="block rounded-2xl px-3 py-2 transition" href="#projects">Projects</a>
+                    </li>
+                    <li>
+                        <a class="block rounded-2xl px-3 py-2 transition" href="#certificates">Certificates</a>
+                    </li>
                 </ul>
             </div>
         </nav>
-        <!-- Main Content -->
-        <div class="max-w-6xl mx-auto px-4 py-8 grid md:grid-cols-3 gap-6">
-            <!-- Left Section -->
-            <aside class="md:col-span-1 space-y-6">
-                <!-- Profile -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="w-32 h-32 mx-auto flex items-center justify-center rounded-full border-4 border-gray-950 overflow-hidden bg-black">
-                        <img src="./pic.png" alt="Profile Picture" class="object-cover prevent-right-click" loading="lazy">
+        <header id="about" class="hero">
+            <div class="hero__content">
+                <span class="hero__eyebrow">Hello, I'm</span>
+                <h1 class="hero__title">Aashna Joshi</h1>
+                <h2 class="hero__subtitle">Backend Engineer • AI Developer</h2>
+                <p class="hero__description">I build scalable backend applications, automation platforms, and AI-powered products using Python and modern cloud technologies. Driven by clean architecture and thoughtful engineering, I enjoy turning complex problems into reliable, production-ready solutions that balance performance, maintainability, and great user experience.</p>
+                <div class="hero__buttons">
+                    <a href="https://drive.google.com/uc?export=download&id=1GmW7FJB9n-Fu5lRHTK_VLUqYKU3YjZTP" class="btn btn--primary" download>
+                        <i class="fa-solid fa-download"></i> Download Resume
+                    </a>
+                    <a href="mailto:aashna.joshi03@gmail.com" class="btn btn--secondary">
+                        <i class="fa-solid fa-envelope"></i> Contact Me
+                    </a>
+                    <a href="#projects" class="btn btn--secondary">
+                        <i class="fa-solid fa-laptop-code"></i> Projects
+                    </a>
+                </div>
+                <div class="hero__socials">
+                    <a href="https://github.com/aashnajoshi" target="_blank" rel="noopener noreferrer" class="social-btn">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+
+                    <a href="https://linkedin.com/in/aashnajoshi" target="_blank" rel="noopener noreferrer" class="social-btn">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+
+                    <a href="https://www.leetcode.com/aashnajoshi" target="_blank" rel="noopener noreferrer" class="social-btn">
+                        <i class="fa-solid fa-code"></i>
+                        <span>LeetCode</span>
+                    </a>
+                </div>
+                <div class="hero__stats">
+                    <div>
+                        <strong>15+</strong>
+                        <span>Clients</span>
                     </div>
-                    <h1 class="text-2xl font-bold text-center mt-4">Aashna Joshi</h1>
-                    <h2 class="text-lg text-center text-blue-600">Python Django Developer</h2>
-                </div>
-                <!-- Personal Info -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Personal Info</h3>
-                    <ul class="space-y-2">
-                        <li class="flex items-center"><span class="w-6 text-blue-600 flex justify-center"><i class="fas fa-venus-mars"></i></span><span class="ml-3">Female</span></li>
-                        <li class="flex items-center"><span class="w-6 text-blue-600 flex justify-center"><i class="fas fa-birthday-cake"></i></span><span class="ml-3">5<sup>th</sup> December, 2003</span></li>
-                        <li class="flex items-center"><span class="w-6 text-blue-600 flex justify-center"><i class="fas fa-language"></i></span><span class="ml-3">English, Hindi</span></li>
-                        <li class="flex items-center"><span class="w-6 text-blue-600 flex justify-center"><i class="fas fa-map-marker-alt"></i></span><span class="ml-3">Delhi, NCR</span></li>
-                    </ul>
-                </div>
-                <!-- Tech Focus & Core Strengths -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Tech That Powers My Work</h3>
-                    <i class="fas fa-code text-gray-800 mt-1 mr-2"></i><span class="text-gray-600">Turning complex problems into scalable solutions with <strong>Python, Django, PostgresSQL</strong> and <strong>Cloud-First Backend Design</strong>!</span>
-                </div>
-                <!-- Skills -->
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Skills</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <label class="block font-medium text-blue-600">Python</label>
-                            <div class="skill-bar"><div class="skill-fill" style="width: 97%"></div></div>
-                        </div>
-                        <div>
-                            <label class="block font-medium text-blue-600">R</label>
-                            <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
-                        </div>
-                        <div>
-                            <label class="block font-medium text-blue-600">Git</label>
-                            <div class="skill-bar"><div class="skill-fill" style="width: 95%"></div></div>
-                        </div>
-                        <div>
-                            <label class="block font-medium text-blue-600">Heroku</label>
-                            <div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div>
-                        </div>
-                        <div>
-                            <label class="block font-medium text-blue-600">JavaScript</label>
-                            <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
-                        </div>
-                        <div>
-                            <label class="block font-medium text-blue-600">PostgresSQL</label>
-                            <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
-                        </div>
-                        <div>
-                            <label class="block font-medium text-blue-600">MongoDB</label>
-                            <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
-                        </div>
-                        <div>
-                            <label class="block font-medium text-blue-600">Azure</label>
-                            <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
-                        </div>
-                        <div>
-                            <label class="block font-medium text-blue-600">AWS</label>
-                            <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
-                        </div>
-                        <div>
-                            <label class="block font-medium text-blue-600">Docker & Kubernetes</label>
-                            <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
-                        </div>
+                    <div>
+                        <strong>30+</strong>
+                        <span>Bots Built</span>
+                    </div>
+                    <div>
+                        <strong>3+</strong>
+                        <span>Years Building</span>
                     </div>
                 </div>
-                <!-- Socials -->
-                <div class="bg-white p-6 rounded-lg shadow-md text-center">
-                    <h3 class="text-xl font-semibold mb-4">Socials</h3>
-                    <div class="flex justify-center gap-4 text-2xl">
-                        <a href="https://linkedin.com/in/aashnajoshi" target="_blank" class="hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/aashnajoshi" target="_blank" class="hover:text-blue-600"><i class="fab fa-github"></i></a>
-                        <a href="https://www.discordapp.com/users/1432238432591024178" target="_blank" class="hover:text-blue-600"><i class="fab fa-discord"></i></a>
-                        <a href="https://www.leetcode.com/aashnajoshi" target="_blank" class="hover:text-blue-600"><i class="fa-solid fa-code"></i></a>
+            </div>
+            <aside class="hero__identity">
+                <div class="identity__info">
+                    <div class="identity__item">
+                        <span class="label">Status</span>
+                        <span class="value available">
+                            <span class="dot"></span> Open to Backend & AI Roles
+                        </span>
+                    </div>
+                    <div class="identity__item">
+                        <span class="label">Location</span>
+                        <span class="value">Delhi, India</span>
+                    </div>
+                    <div class="identity__item">
+                        <span class="label">Languages</span>
+                        <span class="value">Hindi (Native), English (C2)</span>
                     </div>
                 </div>
-                <!-- Contact & Resume -->
-                <div class="bg-white p-6 rounded-lg shadow-md text-center space-y-4">
-                    <h3 class="text-xl font-semibold">Contact Me</h3>
-                    <p class="text-gray-600">Feel free to reach out for opportunities or collaborations!</p>
-                    <div class="flex w-full">
-                        <a href="mailto:aashna.joshi03@gmail.com" class="universal-btn flex-1 flex items-center justify-center text-sm">Email Me <i class="fas fa-envelope ml-2"></i></a>
-                        <a href="https://drive.google.com/uc?export=download&id=1GmW7FJB9n-Fu5lRHTK_VLUqYKU3YjZTP" download class="universal-btn flex-1 flex items-center justify-center text-sm">Download Resume <i class="fas fa-download ml-2"></i></a>
+                <div class="skills-card">
+                    <div class="skills-title">
+                        <i class="fas fa-layer-group"></i>
+                        <span>Core Expertise</span>
+                    </div>
+                    <div class="skill-group">
+                        <span>Backend Engineering</span>
+                        <div class="skill-tags">
+                            <span>Python</span>
+                            <span>Django</span>
+                            <span>FastAPI</span>
+                            <span>REST APIs</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <span>Artificial Intelligence</span>
+                        <div class="skill-tags">
+                            <span>LLMs</span>
+                            <span>RAG</span>
+                            <span>Azure AI</span>
+                            <span>Hugging Face</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <span>Cloud & DevOps</span>
+                        <div class="skill-tags">
+                            <span>AWS</span>
+                            <span>Azure</span>
+                            <span>Docker</span>
+                            <span>Kubernetes</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <span>Data & Storage</span>
+                        <div class="skill-tags">
+                            <span>PostgreSQL</span>
+                            <span>MongoDB</span>
+                            <span>FAISS</span>
+                        </div>
                     </div>
                 </div>
             </aside>
-            <!-- Right Section -->
-            <main class="md:col-span-2 space-y-6">
-                <!-- About -->
-                <section id="about" class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">About Me</h3>
-                    <p class="text-gray-600">A Python enthusiast, I've created bots for Telegram and Discord, using clear prompts for automation. My proficiency extends across various technologies including Git, Heroku, PostgresSQL, MongoDB, Azure, and AWS. I also have a rudimentary understanding of several Web development tools and frameworks like Django. Technology is my passion, and I actively stay informed about most recent innovations by reading and watching relevant content.</p>
-                </section>
-                <!-- Education -->
-                <section id="education" class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Education</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between items-center">
-                                <h4 class="text-lg text-blue-600 font-medium">J.C. Bose University of Science and Technology, YMCA</h4>
-                                <p class="static-blue">2021 - 2025</p>
-                            </div>
-                            <p>BTech in Computer Science with specialization in AI and ML, maintaining a 7.25 GPA.</p>
+        </header>
+        <main class="mt-6 space-y-6">
+            <section class="theme-card rounded-3xl p-6 sm:p-7 lg:p-8" id="education">
+                <div class="flex items-center justify-between gap-3">
+                    <h3 class="text-xl font-semibold">Education</h3>
+                    <span class="section-pill pill-blue">
+                        <i class="fa-solid fa-graduation-cap"></i>Academic
+                    </span>
+                </div>
+                <div class="mt-5 grid gap-4 md:grid-cols-2">
+                    <div class="rounded-2xl border p-5 shadow-sm">
+                        <div class="flex flex-col gap-2">
+                            <h4 class="text-lg font-semibold text-sky-600">J.C. Bose University of Science and Technology, YMCA</h4>
+                            <p class="static-blue text-sm">2021 - 2025</p>
                         </div>
-                        <div>
-                            <div class="flex justify-between items-center">
-                                <h4 class="text-lg text-blue-600 font-medium">DAV Public School</h4>
-                                <p class="static-blue">2005 - 2021</p>
-                            </div>
-                            <p>Secured 92.2% and 78.2% in 10th and 12th grade respectively.</p>
-                        </div>
+                        <p class="mt-2 text-sm leading-7">Bachelor of Technology in Computer Science (Artificial Intelligence & Machine Learning) while building production-ready backend and AI applications alongside coursework.</p>
                     </div>
-                </section>
-                <!-- Experience -->
-                <section id="experience" class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Experience</h3>
-                    <div class="space-y-4">
-                        <div>
-                            <div class="flex justify-between items-center">
-                                <h4 class="text-lg text-blue-600 font-medium">Freelance</h4>
-                                <p class="static-blue">Nov 2025 - Present</p>
-                            </div>
-                            <p><strong>Backend Developer:</strong> Developed backend applications for 10+ clients using Python and Django, focusing on clean architecture, database optimization, and efficient problem-solving; collaborated with teams to deliver AI-assisted, production-ready solutions.</p>
+                    <div class="rounded-2xl border p-5 shadow-sm">
+                        <div class="flex flex-col gap-2">
+                            <h4 class="text-lg font-semibold text-sky-600">DAV Public School</h4>
+                            <p class="static-blue text-sm">2005 - 2021</p>
                         </div>
-                        <div>
-                            <div class="flex justify-between items-center">
-                                <h4 class="text-lg text-blue-600 font-medium">OS Code Solutions</h4>
-                                <p class="static-blue">Feb 2025 - Nov 2025</p>
-                            </div>
-                            <p><strong>Python Developer Intern:</strong> Built and maintained backend applications using Python, Django, and Flask; focused on system design, code optimization, databases, and team collaboration.</p>
-                        </div>
-                        <div>
-                            <div class="flex justify-between items-center">
-                                <h4 class="text-lg text-blue-600 font-medium">Augmented Transformations Pvt Ltd.</h4>
-                                <p class="static-blue">Oct 2024 - Dec 2024</p>
-                            </div>
-                            <p><strong>Software Engineer Trainee:</strong> Contributed to backend development with features like form submissions, user authentication, and Django automation tasks.</p>
-                        </div>
-                        <div>
-                            <div class="flex justify-between items-center">
-                                <h4 class="text-lg text-blue-600 font-medium">CodeWay</h4>
-                                <p class="static-blue">Mar 2024 - Apr 2024</p>
-                            </div>
-                            <p><strong>Python Programming Intern:</strong> Developed mini-applications like To-Do List, Calculator, and Weather App with API integration.</p>
-                        </div>
+                        <p class="mt-2 text-sm leading-7">Completed secondary and senior secondary education with a strong foundation in mathematics, computer science, and analytical problem-solving.</p>
                     </div>
-                </section>
-                <!-- Projects -->
-                <section id="projects" class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Projects</h3>
-                    <div class="space-y-2">
-                        <div class="collapsible">
-                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://aashnajoshi-inquira.hf.space/" target="_blank">Inquira</a></h4>
-                                <span class="ml-auto text-sm static-blue">Jul 2025 – Aug 2025</span>
-                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
-                            </button>
-                            <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <p><strong>Solo Project:</strong>An AI assistant built using a RAG pipeline with FAISS, Sentence Transformers, and Mistral-7B, featuring a FastAPI backend and real-time chat interface for accurate, context-aware responses.</p>
-                                <a href="https://github.com/aashnajoshi/Inquira" target="_blank" class="px-2 py-1 text-xs universal-btn">Github Link</a>
-                            </div>
+                </div>
+            </section>
+            <section class="theme-card rounded-3xl p-6 sm:p-7 lg:p-8" id="experience">
+                <div class="flex items-center justify-between gap-3">
+                    <h3 class="text-xl font-semibold">Experience</h3>
+                    <span class="section-pill pill-green">
+                        <i class="fa-solid fa-briefcase"></i>Industry
+                    </span>
+                </div>
+                <div class="mt-5 space-y-4">
+                    <div class="rounded-2xl border p-5 shadow-sm">
+                        <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                            <h4 class="text-lg font-semibold text-sky-600">Freelance</h4>
+                            <p class="static-blue text-sm">Nov 2025 - Present</p>
                         </div>
-                        <div class="collapsible">
-                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://github.com/aashnajoshi/VidStream" target="_blank">VidStream</a></h4>
-                                <span class="ml-auto text-sm static-blue">Jan 2025 - Apr 2025</span>
-                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
-                            </button>
-                            <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <p><strong>Solo Project:</strong> A Django-based video streaming platform for user sign-up, video uploads, and streaming. It includes features for user authentication, video management, and a content gallery.</p>
-                                <a href="https://github.com/aashnajoshi/VidStream" target="_blank" class="px-2 py-1 text-xs universal-btn">Github Link</a>
-                            </div>
-                        </div>
-                        <div class="collapsible">
-                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://github.com/aashnajoshi/ImageInk" target="_blank">ImageInk</a></h4>
-                                <span class="ml-auto text-sm static-blue">Oct 2024</span>
-                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
-                            </button>
-                            <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <p><strong>Team Project:</strong> AI-powered project that generates creative stories from images using Azure’s image analysis and OpenAI's language model. Available with both console-based and Streamlit-based interfaces for easy interaction.</p>
-                                <a href="https://github.com/aashnajoshi/ImageInk" target="_blank" class="px-2 py-1 text-xs universal-btn">Github Link</a>
-                            </div>
-                        </div>
-                        <div class="collapsible">
-                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://github.com/aashnajoshi/MoodBeats" target="_blank">MoodBeats</a></h4>
-                                <span class="ml-auto text-sm static-blue">Oct 2023 - Jan 2024</span>
-                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
-                            </button>
-                            <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <p><strong>Team Project:</strong> A Python-based system using OpenCV to detect facial expressions and emotions, then recommends music based on the user's emotional state to enhance the listening experience.</p>
-                                <a href="https://github.com/aashnajoshi/MoodBeats" target="_blank" class="px-2 py-1 text-xs universal-btn">Github Link</a>
-                            </div>
-                        </div>
-                        <div class="collapsible">
-                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0">TeleBots</h4>
-                                <span class="ml-auto text-sm static-blue">Jul 2020 - Aug 2023</span>
-                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
-                            </button>
-                            <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <p><strong>Team Effort:</strong> Developed 30+ Telegram bots in Python for various tasks such as file management and URL uploads, improving digital interactions for clients across multiple use cases.</p>
-                            </div>
-                        </div>
+                        <p class="mt-2 text-sm leading-7">Built backend applications for 10+ clients using Python and Django, improving scalability through clean architecture, optimized databases, and reliable production deployments.</p>
                     </div>
-                </section>
-                <!-- Certificates -->
-                <section id="certificates" class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold mb-4">Certificates</h3>
-                    <div class="space-y-2 certificate-items">
-                        <div class="collapsible">
-                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://www.credly.com/badges/37ee2439-6934-44c2-881b-19e0e14e45ad" target="_blank">Cloud Computing 101, AWS Educate</a></h4>
-                                <span class="ml-auto text-sm static-blue">Feb 2025</span>
-                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
-                            </button>
-                            <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <p>Gained foundational knowledge in cloud computing, global infrastructure, and core AWS services.</p>
-                                <a href="https://www.credly.com/badges/37ee2439-6934-44c2-881b-19e0e14e45ad" target="_blank" class="px-2 py-1 text-xs universal-btn">Certificate Link</a>
-                            </div>
+                    <div class="rounded-2xl border p-5 shadow-sm">
+                        <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                            <h4 class="text-lg font-semibold text-sky-600">OS Code Solutions</h4>
+                            <p class="static-blue text-sm">Feb 2025 - Nov 2025</p>
                         </div>
-                        <div class="collapsible">
-                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://learn.mongodb.com/c/tHoi5AVwSnGE8YS7PR55bA" target="_blank">Python Developer Path, MongoDB</a></h4>
-                                <span class="ml-auto text-sm static-blue">Feb 2025</span>
-                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
-                            </button>
-                            <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <p>Mastered CRUD operations, data modeling, aggregation pipelines, and MongoDB Atlas integration using PyMongo in Python.</p>
-                                <a href="https://learn.mongodb.com/c/tHoi5AVwSnGE8YS7PR55bA" target="_blank" class="px-2 py-1 text-xs universal-btn">Certificate Link</a>
-                            </div>
-                        </div>
-                        <div class="collapsible">
-                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://learn.microsoft.com/api/achievements/share/en-gb/aashnajoshi/UYQ827M3" target="_blank">AI Skills Challenge, Microsoft</a></h4>
-                                <span class="ml-auto text-sm static-blue">Dec 2024</span>
-                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
-                            </button>
-                            <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <p>Learned to build secure, cloud-native AI apps using Azure OpenAI, Microsoft Fabric, and Azure management tools.</p>
-                                <a href="https://learn.microsoft.com/api/achievements/share/en-gb/aashnajoshi/UYQ827M3" target="_blank" class="px-2 py-1 text-xs universal-btn">Certificate Link</a>
-                            </div>
-                        </div>
-                        <div class="collapsible">
-                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://learn.microsoft.com/en-gb/users/aashnajoshi/achievements/zkqjklu2" target="_blank">GitHub Foundations, Microsoft</a></h4>
-                                <span class="ml-auto text-sm static-blue">Sep 2024</span>
-                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
-                            </button>
-                            <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <p>Covered Git essentials and GitHub Copilot to streamline development workflows and manage version control effectively.</p>
-                                <a href="https://learn.microsoft.com/en-gb/users/aashnajoshi/achievements/zkqjklu2" target="_blank" class="px-2 py-1 text-xs universal-btn">Certificate Link</a>
-                            </div>
-                        </div>
-                        <div class="collapsible">
-                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://learn.microsoft.com/en-gb/users/aashnajoshi/achievements/zkqjklu2" target="_blank">Azure AI Services, Microsoft</a></h4>
-                                <span class="ml-auto text-sm static-blue">Sep 2024</span>
-                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
-                            </button>
-                            <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <p>Learned Azure AI tools and services for building and deploying AI-based applications and managing workloads.</p>
-                                <a href="https://learn.microsoft.com/en-gb/users/aashnajoshi/achievements/zkqjklu2" target="_blank" class="px-2 py-1 text-xs universal-btn">Certificate Link</a>
-                            </div>
-                        </div>
-                        <div class="collapsible">
-                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://www.linkedin.com/posts/aashnajoshi_ai-artificialintelligence-azureai-activity-7189551404603052033-ZfG-?utm_source=share&utm_medium=member_desktop" target="_blank">Azure AI Workshop, Honeywell</a></h4>
-                                <span class="ml-auto text-sm static-blue">Mar 2024</span>
-                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
-                            </button>
-                            <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <p>Explored Azure ML, MLOps, DevOps lifecycle, and building AI applications with hands-on exposure.</p>
-                                <a href="https://www.linkedin.com/posts/aashnajoshi_ai-artificialintelligence-azureai-activity-7189551404603052033-ZfG-" target="_blank" class="px-2 py-1 text-xs universal-btn">Certificate Link</a>
-                            </div>
-                        </div>
-                        <div class="collapsible">
-                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://moonshot.scaler.com/s/sl/tBds1fw4r_" target="_blank">Docker & Kubernetes, Scalar</a></h4>
-                                <span class="ml-auto text-sm static-blue">Mar 2024</span>
-                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
-                            </button>
-                            <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <p>Covered Docker, Kubernetes, and DevOps principles to enable container-based app development and deployment.</p>
-                                <a href="https://moonshot.scaler.com/s/sl/tBds1fw4r_" target="_blank" class="px-2 py-1 text-xs universal-btn">Certificate Link</a>
-                            </div>
-                        </div>
-                        <div class="collapsible">
-                            <button class="collapsible-header flex items-center w-full text-left p-2 hover:bg-gray-100 rounded">
-                                <h4 class="text-lg text-blue-600 font-medium flex-shrink-0"><a href="https://moonshot.scaler.com/s/sl/1r85vC-8Ui" target="_blank">S.O.L.I.D. Principles, Scalar</a></h4>
-                                <span class="ml-auto text-sm static-blue">Jan 2024</span>
-                                <i class="fas fa-chevron-down ml-2 transition-transform duration-300"></i>
-                            </button>
-                            <div class="collapsible-content hidden p-4 bg-gray-50 rounded-b-lg">
-                                <p>Learned key object-oriented principles (SRP, OCP, LSP, ISP, DIP) for writing maintainable, clean code.</p>
-                                <a href="https://moonshot.scaler.com/s/sl/1r85vC-8Ui" target="_blank" class="px-2 py-1 text-xs universal-btn">Certificate Link</a>
-                            </div>
-                        </div>
+                        <p class="mt-2 text-sm leading-7">Developed backend systems with Python, Django, Flask, PostgreSQL, MongoDB, and AWS while mentoring teammates and contributing to scalable system architecture.</p>
                     </div>
-                </section>
-            </main>
+                    <div class="rounded-2xl border p-5 shadow-sm">
+                        <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                            <h4 class="text-lg font-semibold text-sky-600">Augmented Transformations Pvt Ltd.</h4>
+                            <p class="static-blue text-sm">Oct 2024 - Dec 2024</p>
+                        </div>
+                        <p class="mt-2 text-sm leading-7">Built Django REST APIs, automated email workflows with Celery, and improved processing efficiency by approximately 30% while supporting over 1,000 daily email operations.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="theme-card rounded-3xl p-6 sm:p-7 lg:p-8" id="projects">
+                <div class="flex items-center justify-between gap-3">
+                    <h3 class="text-xl font-semibold">Projects</h3>
+                    <span class="section-pill pill-orange">
+                        <i class="fa-solid fa-code-branch"></i>Featured
+                    </span>
+                </div>
+                <div class="mt-6 grid gap-5 md:grid-cols-2">
+                    <article class="rounded-2xl border p-5 transition hover:-translate-y-1 hover:shadow-md">
+                        <div class="flex items-start justify-between gap-3">
+                            <div>
+                                <h4 class="text-lg font-semibold text-sky-600">
+                                    <a href="https://aashnajoshi-inquira.hf.space/" target="_blank" rel="noopener noreferrer">Inquira</a>
+                                </h4>
+                                <p class="mt-1 text-sm static-blue">Jul 2025 – Aug 2025</p>
+                            </div>
+                            <span class="text-xs font-medium text-slate-500">LLM • RAG</span>
+                        </div>
+                        <p class="mt-4 text-sm leading-7">An AI assistant powered by a RAG pipeline using FAISS, Sentence Transformers, and Mistral-7B. Built with FastAPI and optimized vector search to reduce query latency by approximately 30%.</p>
+                        <div class="mt-5 flex gap-3">
+                            <a href="https://aashnajoshi-inquira.hf.space/" target="_blank" rel="noopener noreferrer" class="rounded-full bg-slate-900 px-4 py-2 text-xs font-semibold text-white transition hover:bg-slate-700">Live Demo</a>
+                            <a href="https://github.com/aashnajoshi/Inquira" target="_blank" rel="noopener noreferrer" class="rounded-full border px-4 py-2 text-xs font-semibold transition hover:border-sky-500">GitHub</a>
+                        </div>
+                    </article>         
+                    <article class="rounded-2xl border p-5 transition hover:-translate-y-1 hover:shadow-md">
+                        <div class="flex items-start justify-between gap-3">
+                            <div>
+                                <h4 class="text-lg font-semibold text-sky-600">
+                                    <a href="https://github.com/aashnajoshi/VidStream" target="_blank" rel="noopener noreferrer">VidStream</a>
+                                </h4>
+                                <p class="mt-1 text-sm static-blue">Jan 2025 - Apr 2025</p>
+                            </div>
+                            <span class="text-xs font-medium text-slate-500">Backend</span>
+                        </div>
+                        <p class="mt-4 text-sm leading-7">A Django-based video streaming platform supporting authentication, uploads, and media management with scalable delivery powered by optimized REST APIs.</p>
+                        <div class="mt-5">
+                            <a href="https://github.com/aashnajoshi/VidStream" target="_blank" rel="noopener noreferrer" class="rounded-full border px-4 py-2 text-xs font-semibold transition hover:border-sky-500">GitHub</a>
+                        </div>
+                    </article>           
+                    <article class="rounded-2xl border p-5 transition hover:-translate-y-1 hover:shadow-md">
+                        <div class="flex items-start justify-between gap-3">
+                            <div>
+                                <h4 class="text-lg font-semibold text-sky-600">
+                                    <a href="https://github.com/aashnajoshi/TextSense" target="_blank" rel="noopener noreferrer">TextSense</a>
+                                </h4>
+                                <p class="mt-1 text-sm static-blue">2024</p>
+                            </div>
+                            <span class="text-xs font-medium text-slate-500">NLP • ML</span>
+                        </div>
+                        <p class="mt-4 text-sm leading-7">A natural language processing project focused on text analysis and extracting meaningful insights using machine learning techniques and Python-based workflows.</p>
+                        <div class="mt-5">
+                            <a href="https://github.com/aashnajoshi/TextSense" target="_blank" rel="noopener noreferrer" class="rounded-full border px-4 py-2 text-xs font-semibold transition hover:border-sky-500">GitHub</a>
+                        </div>
+                    </article>            
+                    <article class="rounded-2xl border p-5 transition hover:-translate-y-1 hover:shadow-md">
+                        <div class="flex items-start justify-between gap-3">
+                            <div>
+                                <h4 class="text-lg font-semibold text-sky-600">
+                                    <a href="https://github.com/aashnajoshi/MoodBeats" target="_blank" rel="noopener noreferrer">MoodBeats</a>
+                                </h4>
+                                <p class="mt-1 text-sm static-blue">Oct 2023 - Jan 2024</p>
+                            </div>
+                            <span class="text-xs font-medium text-slate-500">CV • AI</span>
+                        </div>
+                        <p class="mt-4 text-sm leading-7">Emotion-aware music recommendation system using OpenCV and Python, combining facial expression detection with intelligent recommendation logic.</p>
+                        <div class="mt-5">
+                            <a href="https://github.com/aashnajoshi/MoodBeats" target="_blank" rel="noopener noreferrer" class="rounded-full border px-4 py-2 text-xs font-semibold transition hover:border-sky-500">GitHub</a>
+                        </div>
+                    </article>
+                    <article class="rounded-2xl border p-5 transition hover:-translate-y-1 hover:shadow-md md:col-span-2">
+                        <div class="flex items-start justify-between gap-3">
+                            <div>
+                                <h4 class="text-lg font-semibold text-sky-600">TeleBots (Personal Project)</h4>
+                                <p class="mt-1 text-sm static-blue">Jul 2020 - Aug 2023</p>
+                            </div>
+                            <span class="text-xs font-medium text-slate-500">Automation • Bots</span>
+                        </div>
+                        <p class="mt-4 text-sm leading-7">Developed 30+ Telegram automation bots for file management, utility workflows, and AI-assisted tasks, handling more than 10,000 monthly interactions across multiple use cases.</p>
+                    </article>           
+                    <div class="md:col-span-2 flex justify-center pt-2">
+                        <a href="https://github.com/aashnajoshi" target="_blank" class="inline-flex items-center gap-2 text-sm font-semibold text-sky-600 transition hover:gap-3 hover:text-sky-500">View more projects on GitHub<i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="theme-card rounded-3xl p-6 sm:p-7 lg:p-8" id="certificates">
+                <div class="flex items-center justify-between gap-3">
+                    <h3 class="text-xl font-semibold">Certificates</h3>
+                    <span class="section-pill pill-purple">
+                        <i class="fa-solid fa-award"></i>Learning
+                    </span>
+                </div>
+                <div class="mt-6 grid gap-4 sm:grid-cols-2">
+                    <a href="https://cert.efset.org/en/pBTwyM" target="_blank" rel="noopener noreferrer" class="rounded-2xl border p-5 transition hover:-translate-y-1 hover:shadow-md">
+                        <h4 class="text-lg font-semibold text-sky-600">EF SET English Certificate (C2)</h4>
+                        <p class="mt-2 text-sm static-blue">July 2025</p>
+                        <p class="mt-3 text-sm leading-7">Certified C2 English proficiency demonstrating advanced professional communication skills.</p>
+                    </a>
+                    <a href="https://www.credly.com/badges/37ee2439-6934-44c2-881b-19e0e14e45ad" target="_blank" rel="noopener noreferrer" class="rounded-2xl border p-5 transition hover:-translate-y-1 hover:shadow-md">
+                        <h4 class="text-lg font-semibold text-sky-600">Cloud Computing 101 – AWS Educate</h4>
+                        <p class="mt-2 text-sm static-blue">Feb 2025</p>
+                        <p class="mt-3 text-sm leading-7">Learned cloud computing fundamentals, global infrastructure, and core AWS services.</p>
+                    </a>
+                    <a href="https://learn.mongodb.com/c/tHoi5AVwSnGE8YS7PR55bA" target="_blank" rel="noopener noreferrer" class="rounded-2xl border p-5 transition hover:-translate-y-1 hover:shadow-md">
+                        <h4 class="text-lg font-semibold text-sky-600">Python Developer Path – MongoDB</h4>
+                        <p class="mt-2 text-sm static-blue">Feb 2025</p>
+                        <p class="mt-3 text-sm leading-7">Covered CRUD operations, aggregation pipelines, data modeling, and MongoDB Atlas integration.</p>
+                    </a>
+                    <a href="https://learn.microsoft.com/api/achievements/share/en-gb/aashnajoshi/UYQ827M3" target="_blank" rel="noopener noreferrer" class="rounded-2xl border p-5 transition hover:-translate-y-1 hover:shadow-md">
+                        <h4 class="text-lg font-semibold text-sky-600">AI Skills Challenge – Microsoft</h4>
+                        <p class="mt-2 text-sm static-blue">Dec 2024</p>
+                        <p class="mt-3 text-sm leading-7">Built knowledge of Azure OpenAI, Microsoft Fabric, and cloud-native AI application development.</p>
+                    </a>
+                    <a href="https://moonshot.scaler.com/s/sl/tBds1fw4r_" target="_blank" rel="noopener noreferrer" class="rounded-2xl border p-5 transition hover:-translate-y-1 hover:shadow-md">
+                        <h4 class="text-lg font-semibold text-sky-600">Docker & Kubernetes – Scaler</h4>
+                        <p class="mt-2 text-sm static-blue">Mar 2024</p>
+                        <p class="mt-3 text-sm leading-7">Learned containerization, Kubernetes orchestration, and modern deployment practices for scalable applications.</p>
+                    </a>
+                    <a href="https://learn.microsoft.com/en-gb/users/aashnajoshi/achievements/zkqjklu2" target="_blank" rel="noopener noreferrer" class="rounded-2xl border p-5 transition hover:-translate-y-1 hover:shadow-md">
+                        <h4 class="text-lg font-semibold text-sky-600">GitHub Foundations – Microsoft</h4>
+                        <p class="mt-2 text-sm static-blue">Sep 2024</p>
+                        <p class="mt-3 text-sm leading-7">Covered Git fundamentals, collaboration workflows, version control, and GitHub best practices.</p>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+    <button id="scroll-top" aria-label="Scroll to top" class="group fixed bottom-6 right-6 z-50 flex h-12 w-12 scale-0 items-center justify-center rounded-2xl border border-[var(--border)] bg-[var(--surface)] text-[var(--text-muted)] opacity-0 shadow-lg backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:text-[var(--accent)]">
+        <i class="fas fa-arrow-up text-sm transition-transform duration-300 group-hover:-translate-y-1"></i>
+    </button>
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="https://github.com/aashnajoshi" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://linkedin.com/in/aashnajoshi" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="mailto:aashna.joshi03@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
+            <a href="https://drive.google.com/uc?export=download&id=1GmW7FJB9n-Fu5lRHTK_VLUqYKU3YjZTP" download target="_blank" rel="noopener noreferrer">Resume </a>
         </div>
-        <script src="script.js"></script>
-    </body>
+        <p class="footer-copy">
+            © 2026 Aashna Joshi. Building scalable systems with Python, AI, and curiosity.
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
 </html>
